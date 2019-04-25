@@ -1,0 +1,35 @@
+
+
+#book-basket #user{
+  padding: 7px 10px 0px 10px;
+  text-align: left;
+}
+
+
+.popup-body #decideToChoose{
+  border-radius: 5px;
+  min-width: 20px;
+  background-color: #e8491d;
+  cursor: pointer
+}
+
+
+#book-basket.user{
+  text-align: center;
+}
+
+#book-basket.user #student-email{
+  font-style: italic;
+}
+
+
+
+
+/* searchbox popup */
+
+.clear-basket{
+  margin-left : 5px;
+  cursor : pointer
+}
+
+

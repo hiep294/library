@@ -1,0 +1,142 @@
+.check-box-book,
+.radio-student{
+  transform: scale(1.4);
+  margin: 5px;
+  margin-top: 6px;
+  margin-left: 5px;
+}
+
+#books,
+#students{
+  flex-grow: 1
+}
+
+.book,
+.student{
+  padding : 10px;
+  margin-bottom: 8px;
+  background-color: #e6e6e6;
+  padding-top: 4px;
+  padding-right: 1px;
+  border-right: 10px solid #dadada;
+}
+
+.book .book-info-detail{
+  padding-left: 4px;
+  border-left: 4px #e8491d dotted;
+  display: flex;
+  justify-content: space-between;
+}
+
+.book .book-info-detail #review{
+  flex-grow: 1;
+  order: -1;
+  font-size: 13px;
+  margin-top : 5px;
+}
+
+.book-image{
+  background-color: rgb(112, 112, 112);
+  /* background-image: url('../img/book-demo.jpg'); */
+  background-size: cover;
+  padding: 5px;
+  margin: auto;
+  margin-top : 5px; 
+  width: 200px;
+  height: 357px
+}
+
+.book .book-info{
+  display: flex;
+  justify-content: space-between;
+  line-height: 1.5;
+  padding-left: 5px;
+}
+
+.book .book-info .book-info-main{
+  flex-grow: 1;
+  width: 100%;
+}
+
+.book .book-info h2,
+.student .student-info h2{
+  margin-bottom: 5px;
+  margin-top: 5px
+}
+
+.book .book-info span,
+.student .student-info span{
+  display: block;
+}
+.book .book-info span.info{
+  display: flex;
+}
+.book .book-info span.info input.text{
+  flex-grow: 1;
+}
+.book .book-info span span#quantity{
+  display: inline;
+  font-weight: bold
+}
+
+
+#book-funcs{
+  display : flex;
+  flex-direction: column;
+}
+
+#book-funcs i{
+  cursor : pointer;
+  padding: 6px
+}
+
+#book-funcs #normal{
+  display: flex;
+  flex-direction: column;
+}
+
+#book-funcs #onEditMode{
+  display: flex;
+  flex-direction: column;
+}
+/* for update book */
+textarea#book-review{
+  width: 100%;
+  -moz-box-sizing:border-box; 
+  -webkit-box-sizing:border-box; 
+  box-sizing:border-box;
+}
+
+input#book-quantity{
+  width: 50px
+}
+
+/* add book, student */
+#add-book{
+  padding : 15px;
+}
+
+
+
+/* add more css for search students */
+.student .student-info{
+  display: flex;
+  justify-content: space-between
+}
+
+.student .student-info-main{
+  display: flex;
+  flex-grow: 1
+}
+.student .student-info-main .student-info-detail{
+  flex-grow: 1
+}
+
+.student .avatar-more, .avatar-more{
+  width: 100px;
+  height: 100px;
+  margin-left: 4px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  cursor: pointer;
+}

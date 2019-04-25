@@ -1,0 +1,58 @@
+.ticketdetail{
+  margin-bottom: 10px;
+  text-align: inherit
+}
+
+.ticketdetail .book-title{
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.ticketdetail .over-due{
+  color: red
+}
+
+.ticketdetail .borrowing{
+  color: green
+}
+
+
+.ticketdetail .note{
+  display: flex;
+}
+
+
+.ticketdetail input#ss{
+  flex-grow: 1;
+  width: 100%
+}
+
+.ticketdetail .sss{
+  width: 100%;
+  overflow: hidden;
+  padding-left: 0;
+  padding-right: 0;
+  border: none;
+  outline: none;
+  background-color: inherit;
+  text-overflow: ellipsis;
+  text-align: inherit;
+}
+
+.ticketdetail #is-good{
+  text-align: inherit
+}
+
+.ticketdetail input.sss{
+  background-color: inherit;
+  border: none;
+  outline: none
+}
+
+.ticketdetail input#ss{
+  border: 0px;
+  border-bottom-left-radius: 9px;
+  padding-left: 7px;
+  outline: none
+}

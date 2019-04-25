@@ -1,0 +1,5 @@
+onRemoveStudent => remove student in basket
+onRemoveBook => remove book in basket
+
+onRemoveStudentDB => remove student in database
+onRemoveBook => remove book in database

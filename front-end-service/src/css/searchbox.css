@@ -1,0 +1,19 @@
+
+
+form#searchbox{
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+}
+
+form#searchbox input[type="text"]{
+  padding: 4px;
+  flex-grow: 1;
+  border: 1px solid #adc5ce;
+  height: 25px
+}
+
+.react-datepicker__input-container input{
+  padding: 4px;
+  border: 1px solid #adc5ce;
+}

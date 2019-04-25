@@ -1,0 +1,86 @@
+
+.avatar{
+  margin-top: 10px;
+  width: 70px;
+  height: 70px;
+  background-color: rgb(153, 147, 147);
+  background-size: cover;
+  border-radius: 100%;
+  text-align: center;
+} 
+
+ul#tasks li{
+  background-color: rgb(68, 73, 82);    
+  margin-bottom: 5px; 
+}
+
+ul#tasks li form{    
+  display: flex;
+}
+
+ul#tasks li form input{
+  padding: 4px;
+  height: 29px;
+  width: 100%;
+  flex-grow: 1;
+  border: none;
+  border-radius: 0px;   
+}
+
+ul#tasks li form button.search{
+  min-width: 80px;
+  max-width: 80px;
+  padding: 3px;
+  text-align: left;
+}
+
+aside#sidebar{
+  width: 30%;
+}
+
+aside#sidebar h3{
+  margin-top: 6px;
+  font-size: 20px;
+  text-align: center;
+}
+
+aside#sidebar h3 i{
+  font-size: 10px;
+}
+
+aside#sidebar form#login-form .field{
+  margin-right: 15px;
+}
+
+aside#sidebar form#login-form input{
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 5px;
+  border-radius: 0;
+}
+
+aside#sidebar form#login-form .field-checkbox{
+  display: flex
+}
+
+aside#sidebar form#login-form .field-checkbox input{
+  width: 22px;
+  border: 0px;
+  margin-left: 0px;
+}
+
+aside#sidebar .btn-task{
+  font-size: inherit;
+  color: #fff;
+  text-align: left;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  width: 100%;
+  background: transparent;
+}
+
+aside#sidebar .btn-task:hover{
+  font-weight: bold;
+}
+  

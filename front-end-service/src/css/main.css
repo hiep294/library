@@ -1,0 +1,31 @@
+.container-main{
+  display: flex;
+  justify-content: space-between
+}
+
+article#main-col{
+  width: 65%;
+}
+
+article#main-col h1{
+  padding: 0 20px;
+  font-size: 20px;
+}
+
+/* change style of date picker, time */
+article#main-col ul li{
+  /* background-color: #e6e6e6;
+  padding: 20px;
+  margin-bottom: 5px; */
+  padding-bottom: 13px
+  /* list-style-type: none; */
+}
+
+article#main-col h1.page-title{
+  padding: 0 16px;
+}
+
+
+
+
+/* dark class-> be defined in global */

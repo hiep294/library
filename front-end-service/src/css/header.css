@@ -1,0 +1,43 @@
+
+header{
+  padding-top: 30px;
+  background-color: #35424a;
+  min-height: 70px;
+  border-bottom: #e8491d 3px solid;
+  color: #fff;
+}
+/* header .container -> global */
+.container-header{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+header .highlight{
+  color: #e8491d
+}
+
+header #branding {
+  display: flex
+}
+
+header #branding #logo{  
+  width: 40px;
+  height: 40px;
+  background-image: url('../img/logo.edubios.com.png');
+  background-size: cover  
+}
+
+header #branding h1{
+  margin: 0;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+
+
+
+
+
+

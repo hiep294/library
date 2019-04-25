@@ -1,0 +1,257 @@
+
+
+body{
+  padding: 0;
+  margin: 0;
+  background-color: #f4f4f4;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;  
+}
+
+/* .page-title{
+  text-align: center
+} */
+
+.container{
+  margin: auto;
+  width: 80%;
+  overflow: hidden;
+}
+
+ul{
+  padding: 0;
+  margin: 0;
+}
+
+li{
+  list-style-type: none;  
+}
+
+a{
+  text-decoration: none;
+  color: #fff;
+}
+
+i{
+  cursor: pointer;
+}
+
+.button_1{
+  height: 37px;
+  padding: 0 20px; /*instead of width*/
+  border: none;
+  background: #e8491d;
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+}
+
+.button_2{
+  height: 21px;
+  padding: 0 20px; /*instead of width*/
+  border: none;
+  background: #354248;
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+}
+
+.button_3{
+  width: 120px
+}
+
+.dark{
+  padding: 15px;
+  background: #354248;
+  color: #fff;
+  margin: 10px 0;
+}
+
+.display-none{
+  display: none;
+}
+
+.color-transparent{
+  color: transparent;
+}
+
+
+form#change-password {
+  line-height: 2;
+  border-top: 3px #354248 solid;
+  margin: 0 10px 10px 10px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column
+}
+
+form#change-password .field{
+  padding-right: 8px
+}
+
+#btn-group{
+  display: flex;
+  margin-top: 10px;
+}
+
+button.save{
+  border-right: 3px rgb(68, 73, 82) solid;
+  background-color: rgb(81, 121, 18);
+  text-align: center;
+  width: 50%;
+
+}
+
+button.close{
+  border-left: 3px rgb(68, 73, 82) solid;
+  text-align: center;
+  width: 50%
+}
+
+form#change-password .forStyle{
+  font-size: 14px;
+  margin: auto;
+}
+
+@media(max-width: 768px){
+  .container-header,
+  .container-main{
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .page-title{
+    text-align: center;
+    line-height: 0;
+    margin-bottom: 25px;
+  }
+
+  article#main-col,
+  aside#sidebar,
+  header form{    
+    width: 90%;
+  }
+
+  /* aside#sidebar{    
+    order: -1;
+  } */
+  
+  header {
+    padding-top: 20px;
+  }
+  header #branding h1{
+    margin: 0;
+  }
+
+  form#login-form .button_1{
+    font-size: 20px;
+    width: 100%;
+  }
+
+  aside#sidebar h3{
+    line-height: 0;
+  }
+  aside#sidebar h3{
+    padding-top: 10px;
+  }
+
+  section#searchbox h1{
+    padding-bottom: 12px;
+  }
+
+  .dark{
+    margin-top: 15px;
+  }
+
+  /* for book in book basket and search box */
+  .button_2{
+    width: 100%;
+    margin: auto
+  }
+
+  .book .book-info-detail #review{
+    order: -1;
+  }
+  .book .book-info-detail,
+  .student .student-info-main{
+    flex-direction: column
+  }
+  
+  .student .student-info-main{
+    flex-grow: 1;
+    align-items: center;
+    text-align: center;
+    width: 100%
+  }
+  
+
+  .student .avatar-manager{
+    order: 1
+  }
+  .student .avatar-manager.as-ticket{
+    order: 0
+  }
+
+  .student .avatar-more{
+    width: 200px;
+    height: 200px;
+  }
+
+  .book .book-info-detail .book-image-mg .book-image{
+    width: 250px;
+    height: 446px;
+  }
+
+  article#main-col h1.page-title #main-title{
+    margin-bottom: 20px;
+  }
+
+  .ticketdetail{
+    width: 100%;
+    margin-left: -3px;
+    text-align: center
+  }
+  .ticketdetail div.sss{
+    text-align: center
+  }
+
+  /* fix func icon responsive */
+  
+  
+  /* .student-info-main{
+    order: 3
+  } */
+  /* .student-info{
+    flex-direction: column;
+    align-items: center
+  } */
+  .small-book-image{
+    display: none
+  }
+  /* .book-info{
+    flex-direction: column;
+    align-items: center
+  } */
+  /* .book-info-main{
+    order: 3
+  } */
+  .book-info-main h2{
+    text-align: center
+  }
+  .total-results{
+    text-align: left;
+    margin-top: 7px;
+  }
+  
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.display-inline{
+  display: inline
+}
+
