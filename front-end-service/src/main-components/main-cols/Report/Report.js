@@ -3,8 +3,7 @@ import React, { Component } from 'react'
 import DatePicker from 'react-datepicker'
 import TotalOfObjects from './TotalOfObjects'
 import ExportToExcel from './ExportToExcel'
-
-import TopStudents from './TopStudents'
+import TopObjects from './TopObjects'
 
 export default class Report extends Component {
   constructor(props){
@@ -87,21 +86,7 @@ export default class Report extends Component {
           
           {this.SearchDateComponent()}
         </h1>
-        <center><h2>Student Report</h2></center>
 
-        <TotalOfObjects
-          startDate={this.state.startDate}
-          endDate={this.state.endDate}
-          url={'/report/total-of-students'}
-          title={'Total of students who have borrowed books'}
-        />
-
-        <TopStudents 
-          startDate={this.state.startDate}
-          endDate={this.state.endDate}
-        />
-        
-        
         <center><h2>Ticket Report</h2></center>
         <TotalOfObjects 
           startDate={this.state.startDate}
@@ -109,6 +94,24 @@ export default class Report extends Component {
           url={'/report/total-of-tickets'}
           title={'Total of tickets'}
         />
+
+        <center><h2>Student Report</h2></center>
+        <TotalOfObjects
+          startDate={this.state.startDate}
+          endDate={this.state.endDate}
+          url={'/report/total-of-students'}
+          title={'Total of students who have borrowed books'}
+        />
+        <TopObjects 
+          identify={'topStudents'}
+          url={'/report/top-students'}
+          title={'in the top of students who have borrowed books'}
+          startDate={this.state.startDate}
+          endDate={this.state.endDate}
+        />
+          
+        
+        
 
 
         <center><h2>Book Report</h2></center>
@@ -118,8 +121,13 @@ export default class Report extends Component {
           url={'/report/total-of-books'}
           title={'Total of borrowed books'}
         />
-        <h3>Top 3 books which have been borrowed</h3>
-        <h3>Books whose quantities less than 10 </h3>
+        <TopObjects 
+          identify={'topBooks'}
+          url={'/report/top-books'}
+          title={'in the top of books which have been borrowed'}
+          startDate={this.state.startDate}
+          endDate={this.state.endDate}
+        />
       </div>
     )
   }

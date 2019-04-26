@@ -19,4 +19,5 @@ Rails.application.routes.draw do
   get "/report/total-of-tickets" => "report#total_of_tickets"
   get "/report/total-of-books" => "report#total_of_books"
   get "/report/top-students" => "report#top_students"
+  get "/report/top-books" => "report#top_books"
 end

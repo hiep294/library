@@ -61,6 +61,9 @@ i{
   width: 120px
 }
 
+.button_4{
+  width: 88px;
+}
 .dark{
   padding: 15px;
   background: #354248;
@@ -112,6 +115,19 @@ button.close{
 form#change-password .forStyle{
   font-size: 14px;
   margin: auto;
+}
+
+.fix-one{
+  padding-top: 4px;
+  padding-right: 9px;
+  padding-bottom: 5px
+}
+
+.total-objects{
+  font-size: 90px;
+  text-align: right;
+  color: #35424a;
+  z-index: 1;
 }
 
 @media(max-width: 768px){
@@ -244,7 +260,12 @@ form#change-password .forStyle{
     text-align: left;
     margin-top: 7px;
   }
-  
+  .fix-one{
+    padding: 0
+  }
+  .total-objects{
+    display:none
+  }
 }
 
 html {

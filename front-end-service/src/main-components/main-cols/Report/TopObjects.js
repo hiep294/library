@@ -3,11 +3,12 @@ import axios from 'axios';
 import Auth from '../../../modules/Auth';
 import LimitNumber from './LimitNumber'
 import StudentInReport from './objects/StudentInReport'
+import BookInReport from './objects/BookInReport'
 
-export default class TopStudents extends Component {
+export default class TopObjects extends Component {
   state = {
-    students: [],
-    limitNumber: 1,
+    objects: [],
+    limitNumber: 3,
     render: true
   }
 
@@ -17,7 +18,7 @@ export default class TopStudents extends Component {
     })
 
     axios({
-      url: Auth.getUrl() + '/report/top-students',
+      url: Auth.getUrl() + this.props.url,
       method: 'get',
       headers: {
         token: Auth.getToken(),
@@ -31,7 +32,7 @@ export default class TopStudents extends Component {
       }
     }).then( res => {
       this.setState({
-        students: res.data.data
+        objects: res.data.data
       })
     }).catch( errs => console.log(errs))
   }
@@ -54,26 +55,44 @@ export default class TopStudents extends Component {
     this.loading()
   }
 
+  listOfStudents = () => {
+    return (      
+      this.state.objects.map(student => {
+        return(
+          <StudentInReport
+            key={student.student_id}
+            student={student} 
+          />
+        )
+      })          
+    )
+  }
+
+  listOfBooks = () => {
+    return (
+      this.state.objects.map(book => {
+        return(
+          <BookInReport 
+            key={book.id}
+            book={book}
+          />
+        )
+      })
+    )
+  }
+
   render() {
     return (
       <div>
-        <h3>Top
+        <h3>
           <LimitNumber 
             value={this.state.limitNumber} 
             onChange={this.onChangeLimitNumber}
-          />
-          students who have borrowed books</h3>
+          />&nbsp;
+          {this.props.title}</h3>
         <div id="students">
-          {
-            this.state.students.map(student => {
-              return(
-                <StudentInReport
-                  key={student.student_id}
-                  student={student} 
-                />
-              )
-            })
-          }
+          {this.props.identify==="topStudents"? this.listOfStudents(): <span></span>}
+          {this.props.identify==="topBooks"? this.listOfBooks(): <span></span>}
         </div>
       </div>
     )

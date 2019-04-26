@@ -2,20 +2,16 @@ import React, { Component } from 'react'
 import {Spring} from 'react-spring/renderprops'
 import Auth from '../../../../modules/Auth';
 import ComponentBorrowedBook from './ComponentBorrowedBook'
+import TotalObjects from './TotalObjects'
+
 export default class Student extends Component {
 
   constructor(props){
     super(props)
-    const {email, name, avatar, student_id:id} = this.props.student
+    const {avatar, student_id:id} = this.props.student
     this.state = {
       shortInfo: true,
-      id,
-      email,
-      name,
-      avatar,
-      avatarPreview : Auth.getUrl() + "/uploads/student/avatar/" + id + "/" + avatar,
-      newUpdatedAvatar: null,
-      
+      avatarPreview : Auth.getUrl() + "/uploads/student/avatar/" + id + "/" + avatar
     }
   }
 
@@ -84,7 +80,7 @@ export default class Student extends Component {
         {props => (
           <div style={props}>
             <div className="student"> 
-
+              
               <div className="student-info">
                 
                 <div className="student-info-main" style={styleForStudentInfo}>
@@ -105,19 +101,19 @@ export default class Student extends Component {
                         value={a}
                       />
                       <ComponentBorrowedBook
-                        title={"Total of borrowing books which are not overdue"}
+                        title={"Total of borrowing books which are NOT overdue"}
                         style2={"green"}
                         value={b}
                       />
                       <ComponentBorrowedBook 
-                        title={"Total of borrowing books which are overdue"}
+                        title={"Total of borrowing books which are OVERDUE"}
                         style2={"red"}
                         value={c}
                       />
                     </div>
                   </div>
                 </div>
-                
+                <TotalObjects s={s}/>
               </div>          
             </div>
           </div>
