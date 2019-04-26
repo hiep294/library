@@ -93,7 +93,7 @@ export default class TicketManagement extends Component {
     return (
       <div style={{fontWeight: "normal", width:"98%"}} id="range-date">
         <DatePicker
-          selected={new Date(this.state.startDate)}
+          selected={this.state.startDate}
           onChange={this.onChangeStartDate}
           dateFormat="dd-MM-YYYY h:mm aa"
           showTimeSelect
@@ -101,7 +101,7 @@ export default class TicketManagement extends Component {
           timeCation="time"
         />
         <DatePicker
-          selected={new Date(this.state.endDate)}
+          selected={this.state.endDate}
           onChange={this.onChangeEndDate}
           dateFormat="dd-MM-YYYY h:mm aa"
           showTimeSelect

@@ -15,4 +15,8 @@ Rails.application.routes.draw do
 
   resources :duedays, only: [:update]
 
+  get "/report/total-of-students" => "report#total_of_students"
+  get "/report/total-of-tickets" => "report#total_of_tickets"
+  get "/report/total-of-books" => "report#total_of_books"
+  get "/report/top-students" => "report#top_students"
 end

@@ -34,7 +34,7 @@ export default class Librarian extends Component {
             </li>
             
             <li>
-              <button className="btn-task" onClick={this.props.onBooks} style={threeDots}>
+              <button className="btn-task" onClick={this.props.onReport} style={threeDots}>
               <i className="fa fa-bar-chart fa-fw"/> Report
               </button>
             </li>

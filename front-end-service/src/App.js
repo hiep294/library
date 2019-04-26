@@ -29,8 +29,9 @@ import Dashboard from './main-components/main-cols/Dashboard'
 import TicketManagement from './main-components/main-cols/TicketManagement'
 import BookManagement from './main-components/main-cols/BookManagement'
 import StudentManagement from './main-components/main-cols/StudentManagement'
-
 import BookBasket from './main-components/main-cols/BookBasket'
+import Report from './main-components/main-cols/Report/Report'
+
 import Auth from './modules/Auth'
 
 //connect to api
@@ -47,6 +48,7 @@ export default class App extends Component {
     tasks: {
       //for user role 3: Librarian
       onDashboard: false,
+      onReport: false,
       onBooks: false,
       onStudents: false,
       onBookBasket: false,
@@ -128,6 +130,9 @@ export default class App extends Component {
               onRemoveBookInBasket={this.onRemoveBookInBasket}
               onClearBasket={this.onClearBasket}
             />
+            <Report
+              
+            />
           </MainCol>
 
 
@@ -144,6 +149,7 @@ export default class App extends Component {
               onStudents={this.onStudents}
               onLogout={this.onLogout}
               bookBasket={this.state.bookBasket}
+              onReport={this.onReport}
             >              
             </Librarian>
 
@@ -311,6 +317,14 @@ export default class App extends Component {
     this.setState({
       tasks : {
         onStudents: true
+      }
+    })
+  }
+
+  onReport = () => {
+    this.setState({
+      tasks: {
+        onReport: true
       }
     })
   }
