@@ -410,7 +410,6 @@ export default class StudentManagement extends Component {
   render() {
     return (
       <div>
-        <div id="top"></div>
         <h1 className="page-title">
           {this.Title()}
           { this.state.onAddStudentComponent? <div></div> : (

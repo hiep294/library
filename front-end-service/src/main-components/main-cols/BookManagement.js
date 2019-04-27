@@ -604,7 +604,7 @@ export default class BookManagement extends Component {
     return (
       
         <div>
-          <div id="top"></div>
+          
           <h1 className="page-title">
           <div id="main-title">
             <span title="book management">Books&nbsp;</span>

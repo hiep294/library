@@ -84,12 +84,12 @@ export default class TopObjects extends Component {
   render() {
     return (
       <div>
-        <h3>
+        <p>Top&nbsp;
           <LimitNumber 
             value={this.state.limitNumber} 
             onChange={this.onChangeLimitNumber}
           />&nbsp;
-          {this.props.title}</h3>
+          {this.props.title}</p>
         <div id="students">
           {this.props.identify==="topStudents"? this.listOfStudents(): <span></span>}
           {this.props.identify==="topBooks"? this.listOfBooks(): <span></span>}

@@ -91,6 +91,7 @@ export default class App extends Component {
     //setting current work
     return (
       <div>
+        <div id="top"></div>
         <Header 
           user={this.state.user}
           searchForStudent={this.state.searchBox.searchForStudent}

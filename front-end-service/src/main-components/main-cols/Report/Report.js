@@ -4,6 +4,7 @@ import DatePicker from 'react-datepicker'
 import TotalOfObjects from './TotalOfObjects'
 import ExportToExcel from './ExportToExcel'
 import TopObjects from './TopObjects'
+import FeeReport from './FeeReport';
 
 export default class Report extends Component {
   constructor(props){
@@ -87,15 +88,9 @@ export default class Report extends Component {
           {this.SearchDateComponent()}
         </h1>
 
-        <center><h2>Ticket Report</h2></center>
-        <TotalOfObjects 
-          startDate={this.state.startDate}
-          endDate={this.state.endDate}
-          url={'/report/total-of-tickets'}
-          title={'Total of tickets'}
-        />
+        
 
-        <center><h2>Student Report</h2></center>
+        <h2>Student</h2>
         <TotalOfObjects
           startDate={this.state.startDate}
           endDate={this.state.endDate}
@@ -105,7 +100,7 @@ export default class Report extends Component {
         <TopObjects 
           identify={'topStudents'}
           url={'/report/top-students'}
-          title={'in the top of students who have borrowed books'}
+          title={'students who have borrowed books'}
           startDate={this.state.startDate}
           endDate={this.state.endDate}
         />
@@ -114,7 +109,7 @@ export default class Report extends Component {
         
 
 
-        <center><h2>Book Report</h2></center>
+        <h2>Book</h2>
         <TotalOfObjects
           startDate={this.state.startDate}
           endDate={this.state.endDate}
@@ -124,11 +119,30 @@ export default class Report extends Component {
         <TopObjects 
           identify={'topBooks'}
           url={'/report/top-books'}
-          title={'in the top of books which have been borrowed'}
+          title={'books which have been borrowed'}
           startDate={this.state.startDate}
           endDate={this.state.endDate}
         />
+
+
+        <h2>Ticket</h2>
+        <TotalOfObjects 
+          startDate={this.state.startDate}
+          endDate={this.state.endDate}
+          url={'/report/total-of-tickets'}
+          title={'Total of tickets'}
+        />
+
+        <h2>Fee report</h2>
+        <FeeReport />
+
+        <center>
+          <a href="#top" style={{color: "#000"}}>
+          <i className="fa fa-angle-double-up fa-2x"></i>
+          </a>
+        </center>
       </div>
+      
     )
   }
 //   <Spring

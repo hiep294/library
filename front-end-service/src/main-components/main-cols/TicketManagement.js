@@ -144,7 +144,6 @@ export default class TicketManagement extends Component {
   render() {
     return (
       <div>
-        <div id="top"/>
         <h1 className="page-title">
           <div id="main-title">
           Tickets

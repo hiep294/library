@@ -53,7 +53,7 @@ export default class TotalOfObjects extends Component {
     
     return (
       <div>
-        <h3>{this.props.title}: <span style={{fontWeight: "normal"}}>{this.state.render? '...' : this.state.totalOfObjects}</span></h3>
+        <p>{this.props.title}: <span style={{fontWeight: "normal"}}>{this.state.render? '...' : this.state.totalOfObjects}</span></p>
       </div>
     )
   }

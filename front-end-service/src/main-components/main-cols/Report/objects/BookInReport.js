@@ -40,7 +40,7 @@ export default class Book extends Component {
         <span>
           Total of students who have borrowed this book: {s}
         </span>
-        <span>
+        <span className="count-student">
           <ComponentCountStudent 
             title={'Total of students who have returned this book'}
             value={a}
@@ -81,6 +81,9 @@ export default class Book extends Component {
                 book_image={this.props.book.book_image} 
                 id={this.props.book.id} 
               />
+              <button className="button_2 button_3 button_4" type="button" title="Show more or less">
+                {btnText}
+              </button>  
             </span>
             <div className="book-info-main">
               <h2 id="title" className="title" style={{cursor: "pointer"}} title="title">{this.props.book.title} 
@@ -90,9 +93,9 @@ export default class Book extends Component {
             
             <TotalObjects s={this.props.book.total_of_students}/>  
           </div>
-          <button className="button_2 button_3 button_4" type="button" title="Show more or less">
+          <button className="button_2 button_3 button_5" type="button" title="Show more or less">
             {btnText}
-          </button>          
+          </button>       
         </div>
         </div>
       )}

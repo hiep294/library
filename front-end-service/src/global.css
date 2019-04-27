@@ -62,8 +62,14 @@ i{
 }
 
 .button_4{
+  margin-top: 7px;
   width: 88px;
 }
+
+.button_5{
+  display: none
+}
+
 .dark{
   padding: 15px;
   background: #354248;
@@ -124,7 +130,7 @@ form#change-password .forStyle{
 }
 
 .total-objects{
-  font-size: 90px;
+  font-size: 60px;
   text-align: right;
   color: #35424a;
   z-index: 1;
@@ -265,6 +271,15 @@ form#change-password .forStyle{
   }
   .total-objects{
     display:none
+  }
+  .button_4{
+    display:none
+  }
+  .button_5{
+    display: block
+  }
+  .count-student{
+    text-align: center
   }
 }
 
