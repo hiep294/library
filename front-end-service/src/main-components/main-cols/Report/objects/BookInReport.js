@@ -19,8 +19,7 @@ export default class Book extends Component {
     
     const inline = { display: "inline" }
 
-    const {total_of_students:s, total_of_students_who_have_returned_this_book:a,total_of_students_who_have_not_returned_this_book_on_time:c} = this.props.book
-    const b = s - a - c
+    const {total_of_students:s, total_of_black_students:a,total_of_green_students:b,total_of_red_students:c} = this.props.book
     return (
       <div>
         <span>
@@ -47,7 +46,7 @@ export default class Book extends Component {
             style2={'black'}
           />
           <ComponentCountStudent 
-            title={'Total of students who have been borrowing this book, but NOT overdue'}
+            title={'Total of students who have been borrowing this book, and NOT overdue'}
             value={b}
             style2={'green'}
           />

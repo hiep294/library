@@ -1,3 +1,11 @@
+#black_books: returned books
+#green_books: borrowing books and NOT overdue
+#red_books: borrowing books but OVERDUE
+
+#black_students: students who have returned that book
+#green_books: students who have been borrowing that book and NOT overdue
+#red_books: students who have been borrowing that book but OVERDUE
+
 class Report < ApplicationRecord
   #get_total_of_students
   def self.get_total_of_objects sql, start_date, end_date
@@ -37,8 +45,8 @@ class Report < ApplicationRecord
     return res
   end
 
-  def self.get_top_objects sql, start_date, end_date, limit_number, present, start_date2, end_date2
-    sql = sanitize_sql([sql, start_date, end_date,limit_number, present, start_date2, end_date2])
+  def self.get_top_objects sql, start_date, end_date, limit_number, present1, present2, start_date2, end_date2
+    sql = sanitize_sql([sql, start_date, end_date,limit_number, present1, present2, start_date2, end_date2])
     conn = Report.connection
     res = conn.exec_query(sql)
     conn.close
@@ -63,8 +71,9 @@ class Report < ApplicationRecord
     LIMIT 0,?) c 
     INNER JOIN
     (SELECT count(id) as 'total_of_borrowed_books',
-         sum(`return_date` is not null) as 'total_of_returned_books', 
-         sum(`return_date` is null AND `due_date` < ?) as 'total_of_overdue_books',
+         sum(`return_date` is not null) as 'total_of_black_books', 
+         sum(`return_date` is null AND `due_date` < ?) as 'total_of_red_books',
+         sum(`return_date` is null AND `due_date` >= ?) as 'total_of_green_books',
          `student_id`
     FROM `ticket_details` 
     WHERE `created_at` 
@@ -73,7 +82,7 @@ class Report < ApplicationRecord
     ON c.`total_of_borrowed_books` = d.`total_of_borrowed_books`) b
     INNER JOIN `students` as a
     ON a.`id`=b.`student_id`"
-    res = Report.get_top_objects(sql, start_date, end_date,limit_number, present, start_date, end_date)
+    res = Report.get_top_objects(sql, start_date, end_date,limit_number, present, present, start_date, end_date)
     return res
   end
 
@@ -82,7 +91,7 @@ class Report < ApplicationRecord
     #join to main table
     #join to books
     limit_number = limit_number.to_i
-    sql = "SELECT *
+    sql = "SELECT b.*, a.`id`, a.`title`, a.`authors`, a.`available_quantity`, a.`is_text_book`, a.`book_image`, a.`location`
     FROM
     `books` as a
     JOIN
@@ -96,8 +105,9 @@ class Report < ApplicationRecord
     LIMIT 0,?) as c
     JOIN
     (SELECT count(student_id) as 'total_of_students',
-     sum(`return_date` is not null) as 'total_of_students_who_have_returned_this_book',
-     sum(`return_date` is null and `due_date` < ?) as 'total_of_students_who_have_not_returned_this_book_on_time',
+     sum(`return_date` is not null) as 'total_of_black_students',
+     sum(`return_date` is null and `due_date` < ?) as 'total_of_red_students',
+     sum(`return_date` is null and `due_date` >= ?) as 'total_of_green_students',
      `book_id`
     FROM `ticket_details`
     WHERE `created_at` 
@@ -106,7 +116,7 @@ class Report < ApplicationRecord
     ON c.`total_of_students`=d.`total_of_students`) b
     ON a.`id` = b.`book_id`
     ORDER BY `total_of_students` DESC"
-    res = Report.get_top_objects(sql, start_date, end_date, limit_number, present, start_date, end_date)
+    res = Report.get_top_objects(sql, start_date, end_date, limit_number, present, present, start_date, end_date)
     return res
   end
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_07_131725) do
+ActiveRecord::Schema.define(version: 2019_04_27_154328) do
 
   create_table "books", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title", null: false
@@ -26,12 +26,19 @@ ActiveRecord::Schema.define(version: 2019_04_07_131725) do
     t.string "call_number"
     t.string "publisher"
     t.integer "year_of_publication"
-    t.integer "due_days"
+    t.integer "price", default: 0, null: false
   end
 
   create_table "due_days", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "type_of_book"
     t.integer "due_days"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "fees", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "type_of_book"
+    t.integer "fee_per_day"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -54,6 +61,7 @@ ActiveRecord::Schema.define(version: 2019_04_07_131725) do
     t.string "note"
     t.boolean "is_good", default: true
     t.bigint "student_id"
+    t.integer "fine"
     t.index ["book_id"], name: "index_ticket_details_on_book_id"
     t.index ["student_id"], name: "index_ticket_details_on_student_id"
     t.index ["ticket_id"], name: "index_ticket_details_on_ticket_id"

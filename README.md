@@ -61,6 +61,8 @@ rails c
 User.create(email: 'youremail@gmail.com', password: 'yourpassword')
 DueDay.create(type_of_book: "Reference Book", due_days: 14)
 DueDay.create(type_of_book: "Text Book", due_days: 62)
+Fee.create(type_of_book: "Reference Book", fee_per_day:2000)
+Fee.create(type_of_book: "Text Book", fee_per_day:1000)
 ```
 In this table, due day is set in default, each book can set its own due days
 ## Start App

@@ -46,6 +46,7 @@ export default class TotalOfObjects extends Component {
         render: false,
         totalOfObjects: res.data.data
       })
+      this.props.onChangeData(this.props.identify, res.data.data)
     }).catch( errs => console.log(errs))
   }
 

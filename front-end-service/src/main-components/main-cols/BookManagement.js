@@ -39,6 +39,7 @@ export default class BookManagement extends Component {
     call_number: '',
     publisher: '',
     year_of_publication: new Date().getFullYear(),
+    price: 100000,
     settingDueDays: false,
     viewingBooks: true,
     dueDays: [],
@@ -149,7 +150,7 @@ export default class BookManagement extends Component {
     formData.append("book[call_number]", this.state.call_number)
     formData.append("book[publisher]", this.state.publisher)
     formData.append("book[year_of_publication]", this.state.year_of_publication)
-    
+    formData.append("book[price]", this.state.price)
     await axios.post(usedUrl,formData, {
       headers: {
         token: Auth.getToken(),
@@ -172,7 +173,8 @@ export default class BookManagement extends Component {
           location: '',
           call_number: '',
           publisher: '',
-          year_of_publication: new Date().getFullYear()
+          year_of_publication: new Date().getFullYear(),
+          price: 100000
         })
       } else {
         //show message: data as errors
@@ -190,7 +192,7 @@ export default class BookManagement extends Component {
   updateBookRequest = async (book) => {
     let returnPromise
     //get info
-    const { id, title, authors, tags, available_quantity, is_text_book, newBookImage, review, location, call_number, publisher, year_of_publication, due_days } = book
+    const { id, title, authors, tags, available_quantity, is_text_book, newBookImage, review, location, call_number, publisher, year_of_publication, price } = book
 
     let formDT = new FormData()
     formDT.append("book[id]", id)
@@ -207,7 +209,7 @@ export default class BookManagement extends Component {
     formDT.append("book[call_number]", call_number)
     formDT.append("book[publisher]", publisher)
     formDT.append("book[year_of_publication]", year_of_publication)
-    formDT.append("book[due_days]", due_days)  
+    formDT.append("book[price]", price) 
     //get url
     const usedUrl = Auth.getUrl() + "/books/"+id
     //send request
@@ -310,6 +312,14 @@ export default class BookManagement extends Component {
               <span><textarea id="book-review" className="text" value={this.state.review || ''} rows="15" onChange={this.onEditChange} name="review" placeholder="review"/>
               </span>
               <p>
+                <span>
+                  <span>Price (VND): &nbsp;</span>
+                  <input type="number" 
+                    name="price"
+                    value={this.state.price}
+                    onChange={this.onEditChange}
+                    style={{width: "98%"}}/>                  
+                </span>
                 <span>
                   <span>Year Of Publication: &nbsp;</span>
                   <input type="number" 

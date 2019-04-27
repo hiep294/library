@@ -28,6 +28,7 @@ export default class Book extends Component {
     call_number: '',
     publisher: '',
     year_of_publication: '',
+    price: 0,
     reloadBigImage: false
   }
 
@@ -51,7 +52,7 @@ export default class Book extends Component {
       existed = checkIn? true : false      
     }
 
-    const {id, title, authors, tags, available_quantity, is_text_book, review, location,call_number, publisher, year_of_publication} = this.props.book
+    const {id, title, authors, tags, available_quantity, is_text_book, review, location,call_number, publisher, year_of_publication,price} = this.props.book
 
     this.setState({
       onEditMode: false,
@@ -67,6 +68,7 @@ export default class Book extends Component {
       call_number, 
       publisher, 
       year_of_publication,
+      price,
       reloadBigImage: !this.state.reloadBigImage
     })
   }
@@ -223,6 +225,15 @@ export default class Book extends Component {
       <input name="year_of_publication" type="number" value={this.state.year_of_publication || ''} onChange={this.onEditChange} style={{width: "98%"}} onKeyUp={this.onKeyUp}/>
     )
   }
+  price = () => {
+    return (
+      <input name="price" type="number" value={this.state.price || ''} 
+      onChange={this.onEditChange}
+      style={{width: "98%"}} 
+      onKeyUp={this.onKeyUp}
+      />
+    )
+  }
 
   
   
@@ -373,6 +384,20 @@ export default class Book extends Component {
       </span>
     )
 
+    const editPrice = (
+      <span className="info" style={{display: "block"}}>
+        <span>
+          - Price (VND): &nbsp;
+        </span>
+        {
+          this.state.onEditMode? this.price() : (
+          <span><br />
+            {this.props.book.price}
+          </span>)
+        }
+      </span>
+    )
+
     return (
       <Spring 
         from={{ opacity: 0 }}
@@ -396,6 +421,7 @@ export default class Book extends Component {
             <div id="review">
               <span>{this.state.onEditMode? this.reviewCom() : moreReview}</span>
               <p style={{fontStyle: "italic"}}>
+                {editPrice}
                 {editYearOfPublication}
                 {editPublisherCom}
                 {editCallNumberCom}

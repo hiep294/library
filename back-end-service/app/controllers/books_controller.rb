@@ -52,7 +52,7 @@ class BooksController < ApiController
 
   private
     def book_params
-      params.require(:book).permit(:title,:authors,:tags,:available_quantity,:is_text_book,:book_image,:review,:location,:call_number,:publisher,:year_of_publication)
+      params.require(:book).permit(:title,:authors,:tags,:available_quantity,:is_text_book,:book_image,:review,:location,:call_number,:publisher,:year_of_publication,:price)
     end
 
 end

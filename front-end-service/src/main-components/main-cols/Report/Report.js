@@ -11,14 +11,19 @@ export default class Report extends Component {
     super(props)
     let prevMonth = new Date()
     prevMonth.setMonth(prevMonth.getMonth() - 1)
-    let tomorrow = new Date()
-    tomorrow.setDate(tomorrow.getDate() + 1)
+    let today = new Date()
     //inital state
     this.state = {
       startDate: prevMonth,
-      endDate: tomorrow,
-      data: [],
-      export: false
+      endDate: today,
+      TotalOfStudents: 0,
+      TotalOfTickets: 0,
+      TotalOfBooks: 0,
+      TotalOfFee: 0,
+      TopNStudents: 0,
+      TopNBooks: 0,
+      TopStudents: [],
+      TopBooks: []
     }
   }
 
@@ -35,11 +40,19 @@ export default class Report extends Component {
     })
   }
 
-  clickOutside= () =>{
-    this.refs.picker.cancelFocusInput();
-    this.refs.picker.setOpen(false);
+  onChangeData = async (key, value, key2, value2) => {
+    if(key2){
+      await this.setState({
+        [key]: value,
+        [key2]: value2
+      })
+    }else{
+      await this.setState({
+        [key]: value
+      })
+    }    
   }
-
+  
   SearchDateComponent = () => {
     //onclickoutside: https://github.com/Hacker0x01/react-datepicker/issues/730
     return (
@@ -64,25 +77,12 @@ export default class Report extends Component {
     )
   }
 
-  onChangeTest = (e) => {
-    this.setState({test: e.target.value})
-  }
-
-  doExport = () => {
-    this.setState({
-      export: !this.state.export
-    })
-  }
-
   render() {
     return (
       <div>
         <h1 className="page-title">
           <div className="main-title">
-            Report&nbsp;
-            <ExportToExcel 
-              onChange={this.doExport}
-            />
+            Report
           </div>
           
           {this.SearchDateComponent()}
@@ -96,32 +96,37 @@ export default class Report extends Component {
           endDate={this.state.endDate}
           url={'/report/total-of-students'}
           title={'Total of students who have borrowed books'}
+          identify={'TotalOfStudents'}          
+          onChangeData={this.onChangeData}
         />
         <TopObjects 
-          identify={'topStudents'}
+          identify={'TopStudents'}
+          identify2={'TopNStudents'}
           url={'/report/top-students'}
           title={'students who have borrowed books'}
           startDate={this.state.startDate}
           endDate={this.state.endDate}
+          onChangeData={this.onChangeData}
         />
           
         
-        
-
-
         <h2>Book</h2>
         <TotalOfObjects
           startDate={this.state.startDate}
           endDate={this.state.endDate}
           url={'/report/total-of-books'}
           title={'Total of borrowed books'}
+          identify={'TotalOfBooks'}
+          onChangeData={this.onChangeData}
         />
         <TopObjects 
-          identify={'topBooks'}
+          identify={'TopBooks'}
+          identify2={'TopNBooks'}
           url={'/report/top-books'}
           title={'books which have been borrowed'}
           startDate={this.state.startDate}
           endDate={this.state.endDate}
+          onChangeData={this.onChangeData}
         />
 
 
@@ -131,11 +136,19 @@ export default class Report extends Component {
           endDate={this.state.endDate}
           url={'/report/total-of-tickets'}
           title={'Total of tickets'}
+          identify={'TotalOfTickets'}
+          onChangeData={this.onChangeData}
         />
 
         <h2>Fee report</h2>
         <FeeReport />
-
+        
+        <center >
+          <button style={{padding: "5px", cursor: "pointer"}} onClick={() => ExportToExcel(this.state)}>
+            <i style={{color: "green"}} className="fa fa-file-excel-o fa-2x"/> 
+            <span style={{padding: "5px", fontSize: "20px"}}>Export To Excel File</span>
+          </button>
+        </center>
         <center>
           <a href="#top" style={{color: "#000"}}>
           <i className="fa fa-angle-double-up fa-2x"></i>

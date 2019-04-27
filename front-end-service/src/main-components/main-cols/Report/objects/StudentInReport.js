@@ -59,8 +59,7 @@ export default class Student extends Component {
 
   render() {
     const { student } = this.props
-    const { total_of_borrowed_books:s, total_of_returned_books:a, total_of_overdue_books:c } = student
-    const b = s - a - c
+    const { total_of_borrowed_books:s, total_of_black_books:a, total_of_green_books:b, total_of_red_books:c } = student
     
     const styleMore1 = {
       flexGrow: 1,

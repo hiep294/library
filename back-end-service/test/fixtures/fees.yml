@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type_of_book: MyString
+  value: 1
+
+two:
+  type_of_book: MyString
+  value: 1

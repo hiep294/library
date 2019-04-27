@@ -34,6 +34,7 @@ export default class TopObjects extends Component {
       this.setState({
         objects: res.data.data
       })
+      this.props.onChangeData(this.props.identify, res.data.data, this.props.identify2, this.state.limitNumber)
     }).catch( errs => console.log(errs))
   }
 
@@ -91,8 +92,8 @@ export default class TopObjects extends Component {
           />&nbsp;
           {this.props.title}</p>
         <div id="students">
-          {this.props.identify==="topStudents"? this.listOfStudents(): <span></span>}
-          {this.props.identify==="topBooks"? this.listOfBooks(): <span></span>}
+          {this.props.identify==="TopStudents"? this.listOfStudents(): <span></span>}
+          {this.props.identify==="TopBooks"? this.listOfBooks(): <span></span>}
         </div>
       </div>
     )
