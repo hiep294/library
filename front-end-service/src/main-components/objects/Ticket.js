@@ -204,6 +204,9 @@ export default class Ticket extends Component {
     }
   }
   render() {
+    const totalOfFees = this.state.ticketDetails.reduce((total, item) => {
+      return total += item.fee
+    }, 0)
     return (
       <Spring
         from={{ opacity: 0 }}
@@ -228,6 +231,11 @@ export default class Ticket extends Component {
                     {this.miniBookIcons()}                
                   </div>
                   <div>{this.state.onShowDetails? <hr/> : ''}{this.state.onShowDetails? this.TicketDetails(): <div />}</div>
+                  {totalOfFees? (
+                    <div id="total of fee" style={{color: "red"}}>
+                      Total of fees (VND): {totalOfFees}
+                    </div>
+                  ) : <span></span>}
                   
                 </div>
                 

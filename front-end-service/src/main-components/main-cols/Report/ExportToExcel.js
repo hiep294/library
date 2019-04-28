@@ -93,7 +93,7 @@ function getFeeReport(data){
   })
   res.push({})
   res.push({
-    "FEE": `TOTAL => REFERENCE TO THE FIRST SHEET`
+    "FEE": `=> TOTAL OF FEES (VND): ${data.TotalOfFees}`
   })
   return res
 }
