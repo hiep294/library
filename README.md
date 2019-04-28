@@ -65,13 +65,13 @@ Fee.create(type_of_book: "Reference Book", fee_per_day:2000)
 Fee.create(type_of_book: "Text Book", fee_per_day:1000)
 ```
 In this table, due day is set in default, each book can set its own due days
-## Start App
-1. Start your MySQL
-2. Start Rails. In folder 'back_end_service', run this command:
+## Start App in development mode
+1. Start Database Management System (MySQL)
+2. Start Rails API. In folder 'back_end_service', run this command:
 ```
 rails s
 ```
-3. Start client service (ReactJS) in development mode . In folder 'front_end_service', run this command:
+3. Start front-end service (ReactJS). In folder 'front_end_service', run this command:
 ```
 npm start
 ```
