@@ -4,7 +4,7 @@ https://youtu.be/zAin4nqD7_4
 ## Scenario
 Open university would like to have library website. 
 1. Student: can view and search books, view books in detail, view number of quantity
-2. Librarian: can manage books, students (creating, updating, reading, and deleting). create and update ticket when students borrow books and return books
+2. Librarian: can manage books, students (creating, updating, reading, and deleting); create and update ticket when students borrow books and return books; manage fine and report each month
 
 ## Product specification
 1. The app is responsive in mobile and desktop devices.
@@ -50,8 +50,8 @@ npm install
 In back_end_service>config>database.yml, config the database.
 There should use MySQL because this app uses RAW sql queries of MySQL. Then run the following commands in main folder: 
 ```
-rails db:create #to create database
-rails db:migrate #to create tables
+rails db:create
+rails db:migrate
 ```
 
 ### Create a user, due days
@@ -71,9 +71,8 @@ In this table, due day is set in default, each book can set its own due days
 ```
 rails s
 ```
-3. Start client(ReactJS). In folder 'front_end_service', run this command:
+3. Start client service (ReactJS) in development mode . In folder 'front_end_service', run this command:
 ```
 npm start
 ```
-## Demo app
 
