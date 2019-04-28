@@ -24,4 +24,9 @@ class ReportController < ApiController
     top_books = Report.get_top_books(params[:present], params[:start_date], params[:end_date], params[:limit_number])
     render json: {status: 'SUCCESS', message: 'Loaded top books', data: top_books}
   end
+
+  def total_of_fees
+    render json: {status: 'SUCCESS', message: 'Loaded total of fees', data: 2000}
+  end
+
 end

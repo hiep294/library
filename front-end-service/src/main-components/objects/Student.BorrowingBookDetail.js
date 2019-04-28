@@ -28,7 +28,6 @@ export default class BorrowingBookDetail extends Component {
       isGood: is_good? true: false,
       note
     }
-    console.log(this.state)
   }
 
 
@@ -36,7 +35,7 @@ export default class BorrowingBookDetail extends Component {
    * handle when student returns book
    */
   studentReturnsBook = async () => {
-    this.props.studentReturnsBook(this.props.borrowingBookDetail.ticket_detail_id,this.props.borrowingBookDetail.book_id, this.state.isGood, this.state.note)
+    this.props.studentReturnsBook(this.props.borrowingBookDetail.ticket_detail_id,this.props.borrowingBookDetail.book_id, this.state.isGood, this.state.note, this.state.fee)
   }
 
   onKeyUp = (e) => {
@@ -106,7 +105,7 @@ export default class BorrowingBookDetail extends Component {
           onChange={this.handleChangeBoolean}/>
         </div>
 
-        {this.state.fee? (
+        {this.state.fee || !this.state.isGood? (
           <div className="sss" style={{color: "red"}}>
             Fee (VND):&nbsp; 
             <input 

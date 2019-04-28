@@ -50,7 +50,7 @@ export default class BorrowingBooks extends Component {
   /**
    * handle when student returns book
    */
-  studentReturnsBook = async (ticketDetailId, bookId, bookIsGood, note) => {
+  studentReturnsBook = async (ticketDetailId, bookId, bookIsGood, note, fee) => {
     
     await axios({
       url: Auth.getUrl() + '/ticketdetails/' + ticketDetailId,
@@ -59,6 +59,7 @@ export default class BorrowingBooks extends Component {
         book_id: bookId,
         book_is_good: bookIsGood,
         note,
+        fee,
         return_date: new Date()
       },
       headers: {

@@ -14,7 +14,7 @@ class TicketdetailsController < ApiController
         check = false
       end
       #set return date
-      ticketDetail.update_attributes return_date: params[:return_date], note: params[:note], is_good: check
+      ticketDetail.update_attributes return_date: params[:return_date], note: params[:note], is_good: check, fee: params[:fee]
       render json: {status: 'SUCCESS', message: 'Returned Book', data: ticketDetail}, status: :ok
 
       

@@ -19,7 +19,7 @@ export default class Report extends Component {
       TotalOfStudents: 0,
       TotalOfTickets: 0,
       TotalOfBooks: 0,
-      TotalOfFee: 0,
+      TotalOfFees: 0,
       TopNStudents: 0,
       TopNBooks: 0,
       TopStudents: [],
@@ -141,7 +141,14 @@ export default class Report extends Component {
         />
 
         <h2>Fee report</h2>
-        <FeeReport />
+        <TotalOfObjects 
+          startDate={this.state.startDate}
+          endDate={this.state.endDate}
+          url={'/report/total-of-fees'}
+          title={'Total of fees (VND)'}
+          identify={'TotalOfFees'}
+          onChangeData={this.onChangeData}
+        />
         
         <center >
           <button style={{padding: "5px", cursor: "pointer"}} onClick={() => ExportToExcel(this.state)}>

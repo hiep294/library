@@ -36,7 +36,7 @@ function getTotal(data){
     {" ": "Total Of Students", "": data.TotalOfStudents},
     {" ": "Total Of Books", "": data.TotalOfBooks},
     {" ": "Total Of Tickets", "": data.TotalOfTickets},
-    {" ": "Total Of Fee", "": data.TotalOfFee}
+    {" ": "Total Of Fees", "": data.TotalOfFees}
   ]
   return res
 }
