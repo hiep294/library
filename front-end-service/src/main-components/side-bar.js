@@ -3,26 +3,6 @@ import Policy from './side-bars/Policy'
 
 class SideBar extends Component {
 
-  // state = {
-  //   taskOn: false
-  // }
-
-  // setTasksOnOff = async () => {
-  //   await this.setState({
-  //     taskOn: !this.state.taskOn
-  //   })
-  //   sessionStorage.setItem('taskOn', this.state.taskOn)
-  // }
-
-  // componentDidMount = () => {
-  //   const s = sessionStorage.getItem('taskOn') === "true"
-  //   if(s !== null){
-  //     this.setState({
-  //       taskOn: s
-  //     })
-  //   }
-    
-  // }
 
   render() {
     const { auth, taskOn } = this.props

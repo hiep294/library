@@ -37,7 +37,9 @@ export default class SearchBox extends Component {
             onChange={this.props.handleChangeKeyword}
           />
         </form>
-        <div className="total-results"><i style={{fontSize: "13px", position: "absolute", fontWeight: "normal", paddingLeft: "4px"}}>{this.props.total || 0} result(s)</i></div>
+        {this.props.total? (
+          <div className="total-results"><i style={{fontSize: "13px", position: "absolute", fontWeight: "normal", paddingLeft: "4px"}}>{this.props.total} result(s)</i></div>
+        ) : <span></span>}        
       </div> 
     )
   }

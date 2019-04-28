@@ -115,11 +115,14 @@ export default class TicketManagement extends Component {
         value={this.state.value}
         onChange={this.handleKeywordChange}
         onKeyUp={this.onKeyUp}/>
-        <div className="total-results">
-          <i style={{fontSize: "13px", position: "absolute", fontWeight: "normal", paddingLeft: "4px"}}>
-            {this.state.total || 0} result(s)
-          </i>
-        </div>
+        {this.state.total? (
+          <div className="total-results">
+            <i style={{fontSize: "13px", position: "absolute", fontWeight: "normal", paddingLeft: "4px"}}>
+              {this.state.total} result(s)
+            </i>
+          </div>
+        ) : <span></span>}
+        
       </div>
     )
   }
