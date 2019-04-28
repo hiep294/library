@@ -4,7 +4,7 @@ import DatePicker from 'react-datepicker'
 import TotalOfObjects from './TotalOfObjects'
 import ExportToExcel from './ExportToExcel'
 import TopObjects from './TopObjects'
-import FeeReport from './FeeReport';
+import ListOfTicketDetails from './ListOfTicketDetails';
 
 export default class Report extends Component {
   constructor(props){
@@ -23,7 +23,8 @@ export default class Report extends Component {
       TopNStudents: 0,
       TopNBooks: 0,
       TopStudents: [],
-      TopBooks: []
+      TopBooks: [],
+      TicketDetails: []
     }
   }
 
@@ -140,6 +141,7 @@ export default class Report extends Component {
           onChangeData={this.onChangeData}
         />
 
+
         <h2>Fee report</h2>
         <TotalOfObjects 
           startDate={this.state.startDate}
@@ -149,6 +151,14 @@ export default class Report extends Component {
           identify={'TotalOfFees'}
           onChangeData={this.onChangeData}
         />
+        <ListOfTicketDetails 
+          startDate={this.state.startDate}
+          endDate={this.state.endDate}
+          identify={'TicketDetails'}
+          onChangeData={this.onChangeData}
+        />
+
+        
         
         <center >
           <button style={{padding: "5px", cursor: "pointer"}} onClick={() => ExportToExcel(this.state)}>

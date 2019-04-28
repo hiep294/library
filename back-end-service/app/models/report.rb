@@ -6,6 +6,8 @@
 #green_books: students who have been borrowing that book and NOT overdue
 #red_books: students who have been borrowing that book but OVERDUE
 
+#sum(`return_date` is not null) ~ sum(if(`return_date` is not null, 1, 0)) = plus 1, start of 0 if it satisfies conditions 
+
 class Report < ApplicationRecord
   #get_total_of_students
   def self.get_total_of_objects sql, start_date, end_date
@@ -39,6 +41,14 @@ class Report < ApplicationRecord
   def self.get_total_of_books start_date, end_date
     #number of borrowed books = number of ticket details
     sql = "SELECT count(*) as `total`
+          FROM `ticket_details`
+          WHERE `created_at` between ? and ?"
+    res = Report.get_total_of_objects(sql, start_date, end_date)
+    return res
+  end
+
+  def self.get_total_of_fees start_date, end_date
+    sql = "SELECT sum(`fee`) as `total` 
           FROM `ticket_details`
           WHERE `created_at` between ? and ?"
     res = Report.get_total_of_objects(sql, start_date, end_date)
@@ -117,6 +127,30 @@ class Report < ApplicationRecord
     ON a.`id` = b.`book_id`
     ORDER BY `total_of_students` DESC"
     res = Report.get_top_objects(sql, start_date, end_date, limit_number, present, present, start_date, end_date)
+    return res
+  end
+
+  
+  def self.get_ticket_details_have_fees start_date, end_date
+    #should check return_date between start_date and end_date
+    sql = "SELECT c.*, d.`title`
+          FROM
+          (SELECT a.*,b.`name`,b.`email`
+          FROM 
+          (SELECT * 
+          FROM `ticket_details` 
+          WHERE (`return_date` between ? and ?)
+          AND (`fee`>0)) as a
+          INNER JOIN
+          `students` as b
+          ON a.`student_id`=b.`id`) as c
+          INNER JOIN
+          `books` as d
+          on c.`book_id`=d.`id`"
+    sql = sanitize_sql([sql, start_date, end_date])
+    conn = Report.connection
+    res = conn.exec_query(sql)
+    conn.close
     return res
   end
 end

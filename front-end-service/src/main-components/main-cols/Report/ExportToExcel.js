@@ -76,12 +76,35 @@ function getTopBooks(data){
   return res
 }
 
+function getFeeReport(data){
+  let res = []  
+  res = data.TicketDetails.map( item => {
+    return {
+      "FEE": item.fee,
+      "NOTE": item.note,
+      "STUDENT NAME": item.name,
+      "EMAIL": item.email,
+      "BOOK TITLE": item.title,
+      "CREATED AT": formatDate(item.created_at),
+      "DUE AT": formatDate(item.due_date),
+      "RETURN AT": formatDate(item.return_date),
+      "RETURNED STATUS": item.is_good? 'good': 'NOT good'
+    }
+  })
+  res.push({})
+  res.push({
+    "FEE": `TOTAL => REFERENCE TO THE FIRST SHEET`
+  })
+  return res
+}
+
 export default data => {
   import('xlsx').then(XLSX => {
     const wb = new Workbook()
     const total = getTotal(data)
     const topStudents = getTopStudents(data)
     const topBooks = getTopBooks(data)
+    const feeReport = getFeeReport(data)
 
     const ws1 = XLSX.utils.json_to_sheet(total)
     wb.SheetNames.push('Total')
@@ -94,6 +117,10 @@ export default data => {
     const ws3 = XLSX.utils.json_to_sheet(topBooks)
     wb.SheetNames.push('Top Borrowed Books')
     wb.Sheets['Top Borrowed Books'] = ws3
+
+    const ws4 = XLSX.utils.json_to_sheet(feeReport)
+    wb.SheetNames.push('Fee Report')
+    wb.Sheets['Fee Report'] = ws4
 
     const wbout = XLSX.write(wb, {bookType: 'xlsx', bookSST:true, type: 'binary'})
 

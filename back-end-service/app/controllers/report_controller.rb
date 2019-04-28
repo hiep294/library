@@ -15,6 +15,11 @@ class ReportController < ApiController
     render json: {status: 'SUCCESS', message: 'Loaded total of books', data: total_of_books}
   end
 
+  def total_of_fees
+    total_of_fees = Report.get_total_of_fees(params[:start_date], params[:end_date])
+    render json: {status: 'SUCCESS', message: 'Loaded total of fees', data: total_of_fees}
+  end
+
   def top_students
     top_students = Report.get_top_students(params[:present], params[:start_date], params[:end_date], params[:limit_number])
     render json: {status: 'SUCCESS', message: 'Loaded top students', data: top_students}
@@ -25,8 +30,9 @@ class ReportController < ApiController
     render json: {status: 'SUCCESS', message: 'Loaded top books', data: top_books}
   end
 
-  def total_of_fees
-    render json: {status: 'SUCCESS', message: 'Loaded total of fees', data: 2000}
+  def get_ticket_details_have_fees
+    ticket_details_have_fees = Report.get_ticket_details_have_fees(params[:start_date], params[:end_date])
+    render json: {status: 'SUCCESS', message: 'Loaded ticket details have fees', data: ticket_details_have_fees}
   end
 
 end

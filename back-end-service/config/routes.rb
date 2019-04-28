@@ -22,6 +22,7 @@ Rails.application.routes.draw do
   get "/report/top-students" => "report#top_students"
   get "/report/top-books" => "report#top_books"
   get "/report/total-of-fees" => "report#total_of_fees"
+  get "/report/ticket-details-have-fees" => "report#get_ticket_details_have_fees"
 
   resources :fees, only: [:update]
 end

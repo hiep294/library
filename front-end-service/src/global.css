@@ -136,6 +136,10 @@ form#change-password .forStyle{
   z-index: 1;
 }
 
+.fee-info{
+  display: flex
+}
+
 @media(max-width: 768px){
   .container-header,
   .container-main{
@@ -280,6 +284,9 @@ form#change-password .forStyle{
   }
   .count-student{
     text-align: center
+  }
+  .fee-info{
+    flex-direction: column
   }
 }
 
