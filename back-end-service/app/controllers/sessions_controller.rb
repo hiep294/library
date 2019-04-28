@@ -25,7 +25,7 @@ class SessionsController < ApiController
 
     def send_token_for_valid_login_of(user)
       #send new token for user# is admin just notify for client
-      render json: { token: user.auth_token, admin: user.is_admin, name: user.name }
+      render json: { token: user.auth_token, admin: user.is_admin, name: user.name, fee: Fee.all }
     end
 
     def logout

@@ -116,19 +116,10 @@ export default class BorrowingBookDetail extends Component {
         <div>Is Good? 
           <input type="checkbox" 
           name="isGood"
-          checked={this.state.isGood? true : false}
-          onChange={this.handleChangeBoolean}/>
+          checked={true}
+          readOnly/>
         </div>
-        <div className="note">
-          <input id="ss" type="text" style={this.notingStyle()}
-            name="note"
-            value={this.state.note || ''} 
-            onChange={this.handleChangeText}
-            onKeyUp={this.onKeyUp}
-            onFocus={this.noting}
-            placeholder="..."/>
-          <button onClick={this.updateTicketDetail}>OK</button>
-        </div>
+        
       </div>
     )
   }

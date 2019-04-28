@@ -45,7 +45,7 @@ class Student < ApplicationRecord
 
   def self.booksWhichHaveBeenBorrowingBy student_id
     #find ticket detail of student, order by due_date ASC
-    sql = "SELECT b.`id` AS `ticket_detail_id`,b.`ticket_id`,b.`book_id`,c.`title` AS 'book_title',b.`created_at`,b.`due_date`,b.`return_date`,b.`is_good`,b.`note` 
+    sql = "SELECT b.`id` AS `ticket_detail_id`,b.`ticket_id`,b.`book_id`,c.`title` AS 'book_title',b.`created_at`,b.`due_date`,b.`return_date`,b.`is_good`,b.`note`, b.`fee`,c.`price`, c.`is_text_book`
           FROM `tickets` AS a
           INNER JOIN `ticket_details` AS b ON 
           a.`student_id`="+student_id.to_s+"     

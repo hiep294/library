@@ -31,8 +31,10 @@ import BookManagement from './main-components/main-cols/BookManagement'
 import StudentManagement from './main-components/main-cols/StudentManagement'
 import BookBasket from './main-components/main-cols/BookBasket'
 import Report from './main-components/main-cols/Report/Report'
+import FeeConfiguration from './main-components/main-cols/FeeConfiguration'
 
 import Auth from './modules/Auth'
+import FeePerDay from './modules/ FeePerDay'
 
 //connect to api
 import axios from 'axios'
@@ -56,7 +58,8 @@ export default class App extends Component {
       //for user role 2: Student
       onMyTickets: false,    
       //for everyone: in policy
-      onHome: false
+      onHome: false,
+      onFee: false
     },
     searchBox: {
       open: false,
@@ -131,9 +134,8 @@ export default class App extends Component {
               onRemoveBookInBasket={this.onRemoveBookInBasket}
               onClearBasket={this.onClearBasket}
             />
-            <Report
-              
-            />
+            <Report />
+            <FeeConfiguration />
           </MainCol>
 
 
@@ -151,6 +153,7 @@ export default class App extends Component {
               onLogout={this.onLogout}
               bookBasket={this.state.bookBasket}
               onReport={this.onReport}
+              onFee={this.onFee}
             >              
             </Librarian>
 
@@ -243,6 +246,9 @@ export default class App extends Component {
       //set name, is admin
       Auth.setIsAdmin(res.data.admin)
       Auth.setUserName(res.data.name)
+      //set fee
+      FeePerDay.setForReferenceBook(res.data.fee[0].fee_per_day)
+      FeePerDay.setForTextBook(res.data.fee[1].fee_per_day)
       this.setState({
         auth: Auth.isUserAuthenticated(),
         
@@ -326,6 +332,14 @@ export default class App extends Component {
     this.setState({
       tasks: {
         onReport: true
+      }
+    })
+  }
+
+  onFee = () => {
+    this.setState({
+      tasks: {
+        onFee: true
       }
     })
   }

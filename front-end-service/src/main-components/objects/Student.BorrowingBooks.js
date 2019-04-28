@@ -47,6 +47,9 @@ export default class BorrowingBooks extends Component {
   }
 
 
+  /**
+   * handle when student returns book
+   */
   studentReturnsBook = async (ticketDetailId, bookId, bookIsGood, note) => {
     
     await axios({

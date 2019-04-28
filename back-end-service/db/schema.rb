@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_27_154328) do
+ActiveRecord::Schema.define(version: 2019_04_28_050159) do
 
   create_table "books", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title", null: false
@@ -61,7 +61,7 @@ ActiveRecord::Schema.define(version: 2019_04_27_154328) do
     t.string "note"
     t.boolean "is_good", default: true
     t.bigint "student_id"
-    t.integer "fine"
+    t.integer "fee", default: 0
     t.index ["book_id"], name: "index_ticket_details_on_book_id"
     t.index ["student_id"], name: "index_ticket_details_on_student_id"
     t.index ["ticket_id"], name: "index_ticket_details_on_ticket_id"

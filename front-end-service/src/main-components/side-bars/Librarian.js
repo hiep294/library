@@ -40,6 +40,12 @@ export default class Librarian extends Component {
             </li>
 
             <li>
+              <button className="btn-task" onClick={this.props.onFee} style={threeDots}>
+              <i className="fa fa-money fa-fw"/> Fee Configuration
+              </button>
+            </li>
+
+            <li>
               <button className="btn-task" onClick={this.props.onBookBasket} style={threeDots}>
                 <i className="fa fa-shopping-basket fa-fw" /> 
                 &nbsp;Book Basket

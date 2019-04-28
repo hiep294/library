@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'fees/update'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root "welcome#index"
   post "/login" => "sessions#create"
@@ -20,4 +21,6 @@ Rails.application.routes.draw do
   get "/report/total-of-books" => "report#total_of_books"
   get "/report/top-students" => "report#top_students"
   get "/report/top-books" => "report#top_books"
+
+  resources :fees, only: [:update]
 end
