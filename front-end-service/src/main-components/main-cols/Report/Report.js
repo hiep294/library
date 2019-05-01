@@ -82,7 +82,7 @@ export default class Report extends Component {
     return (
       <div>
         <h1 className="page-title">
-          <div className="main-title">
+          <div id="main-title">
             Report
           </div>
           
@@ -91,7 +91,7 @@ export default class Report extends Component {
 
         
 
-        <h2>Student</h2>
+        
         <TotalOfObjects
           startDate={this.state.startDate}
           endDate={this.state.endDate}
@@ -100,18 +100,6 @@ export default class Report extends Component {
           identify={'TotalOfStudents'}          
           onChangeData={this.onChangeData}
         />
-        <TopObjects 
-          identify={'TopStudents'}
-          identify2={'TopNStudents'}
-          url={'/report/top-students'}
-          title={'students who have borrowed books'}
-          startDate={this.state.startDate}
-          endDate={this.state.endDate}
-          onChangeData={this.onChangeData}
-        />
-          
-        
-        <h2>Book</h2>
         <TotalOfObjects
           startDate={this.state.startDate}
           endDate={this.state.endDate}
@@ -120,18 +108,6 @@ export default class Report extends Component {
           identify={'TotalOfBooks'}
           onChangeData={this.onChangeData}
         />
-        <TopObjects 
-          identify={'TopBooks'}
-          identify2={'TopNBooks'}
-          url={'/report/top-books'}
-          title={'books which have been borrowed'}
-          startDate={this.state.startDate}
-          endDate={this.state.endDate}
-          onChangeData={this.onChangeData}
-        />
-
-
-        <h2>Ticket</h2>
         <TotalOfObjects 
           startDate={this.state.startDate}
           endDate={this.state.endDate}
@@ -140,9 +116,6 @@ export default class Report extends Component {
           identify={'TotalOfTickets'}
           onChangeData={this.onChangeData}
         />
-
-
-        <h2>Fee report</h2>
         <TotalOfObjects 
           startDate={this.state.startDate}
           endDate={this.state.endDate}
@@ -151,6 +124,32 @@ export default class Report extends Component {
           identify={'TotalOfFees'}
           onChangeData={this.onChangeData}
         />
+
+
+        <TopObjects 
+          identify={'TopStudents'}
+          identify2={'TopNStudents'}
+          url={'/report/top-students'}
+          title={'students who have borrowed the most books'}
+          startDate={this.state.startDate}
+          endDate={this.state.endDate}
+          onChangeData={this.onChangeData}
+        />
+        <TopObjects 
+          identify={'TopBooks'}
+          identify2={'TopNBooks'}
+          url={'/report/top-books'}
+          title={'the most borrowed books'}
+          startDate={this.state.startDate}
+          endDate={this.state.endDate}
+          onChangeData={this.onChangeData}
+        />
+
+
+        <center>
+          <h2>Fee report<br/>Total of fees (VND): {this.state.TotalOfFees}</h2>
+        </center>
+        
         <ListOfTicketDetails 
           startDate={this.state.startDate}
           endDate={this.state.endDate}

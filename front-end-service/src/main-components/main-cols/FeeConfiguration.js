@@ -70,9 +70,11 @@ export default class FeeConfiguration extends Component {
     }
     return (    
       <div>
-        <div>
-          <h1>Fee Configuration</h1>
-        </div>
+        <h1 className="page-title">
+          <div id="main-title">
+            Fee Configuration
+          </div>
+        </h1>
         <Spring
           from={{ opacity: 0 }}
           to={{ opacity: 1 }}

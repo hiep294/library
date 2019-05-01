@@ -140,6 +140,10 @@ form#change-password .forStyle{
   display: flex
 }
 
+#main-col{
+  min-height: 900px
+}
+
 @media(max-width: 768px){
   .container-header,
   .container-main{
@@ -287,6 +291,14 @@ form#change-password .forStyle{
   }
   .fee-info{
     flex-direction: column
+  }
+
+  aside#sidebar{
+    order: -1
+  }
+
+  #policy{
+    display: none
   }
 }
 

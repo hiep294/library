@@ -21,10 +21,10 @@ export default class StudentManagement extends Component {
     avatarPreview : '',
     selectedAvatar : null,
     reloadBorrowingBooksOfEachStudent: false,
-    title: 'Students who has not been returning books on time'
+    title: 'Students who have not been returning books on time'
   }
-  // Students who has been borrowing books
-  // Students who has not been returning books on time
+  // Students who have been borrowing books
+  // Students who have not been returning books on time
   
   printAlertMessage = (errs) => {
     let message = ""
@@ -47,7 +47,7 @@ export default class StudentManagement extends Component {
     let params = {}
     if(this.props.inDashboard){
       url = Auth.getUrl() + '/dashboard'
-      if (this.state.title ==="Students who has not been returning books on time"){
+      if (this.state.title ==="Students who have not been returning books on time"){
         params = {
           keyword: this.state.keyword,
           page: newPageNumber,
@@ -55,7 +55,7 @@ export default class StudentManagement extends Component {
           getStudentsLate: true,
           present: new Date()
         }
-      } else if (this.state.title === "Students who has been borrowing books"){
+      } else if (this.state.title === "Students who have been borrowing books"){
         params = {
           keyword: this.state.keyword,
           page:newPageNumber,
@@ -383,8 +383,8 @@ export default class StudentManagement extends Component {
       return (
         <div>
           <select value={this.state.title} onChange={this.handleTitleChange}  style={{fontSize: "15px", outline: "none", width: "100%"}}>
-            <option value="Students who has not been returning books on time">Students who has not been returning books on time</option>
-            <option value="Students who has been borrowing books">Students who has been borrowing books</option>
+            <option value="Students who have not been returning books on time">Students who have not been returning books on time</option>
+            <option value="Students who have been borrowing books">Students who have been borrowing books</option>
           </select>
         </div>
       )
