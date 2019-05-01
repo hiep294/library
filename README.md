@@ -48,12 +48,13 @@ npm install
 ## Configuration
 ### Set up database
 In back_end_service>config>database.yml, config the database.
-There should use MySQL because this app uses RAW sql queries of MySQL. Then run the following commands in main folder: 
+There should use MySQL because this app uses RAW sql queries of MySQL. Then run the following commands in 'back_end_service' folder: 
 ```
 rails db:create
 rails db:migrate
 ```
-
+* For demo, there can import file sql 'library.sql' above to main database before type command ```rails db:migrate```
+ 
 ### Create a user, due days
 In folder 'back_end_service', run commands:
 ```
