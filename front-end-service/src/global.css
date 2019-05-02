@@ -144,6 +144,12 @@ form#change-password .forStyle{
   min-height: 900px
 }
 
+#feedback{
+  width: 30%;
+  position: absolute;
+  right: 10%
+}
+
 @media(max-width: 768px){
   .container-header,
   .container-main{
@@ -299,6 +305,17 @@ form#change-password .forStyle{
 
   #policy{
     display: none
+  }
+
+  .container-feedback{
+    width: 80%
+  }
+
+  #feedback{
+    margin: auto;
+    right: 0;
+    left: 0;
+    width: 80%
   }
 }
 

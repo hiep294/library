@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 
 export default class header extends Component {
-
   render() {
     return (
       <header>
@@ -12,7 +11,8 @@ export default class header extends Component {
             <h1 id="branding" onClick={this.props.onHome}><span className="highlight">Open</span> Library</h1>
           </div>
         </div>
-      </header> 
+        
+      </header>
     )
   }
 }

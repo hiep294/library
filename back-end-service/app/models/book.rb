@@ -25,7 +25,7 @@ class Book < ApplicationRecord
       keyword = keyword.strip
       if keyword != ''
         sql = "SELECT DISTINCT `id`, `title`, `authors`, `tags`, `available_quantity`, `is_text_book`, `book_image`, 
-        `review`, `created_at`, `location`, `call_number`, `publisher`, `year_of_publication`, `due_days` FROM (SELECT 1 as rank, `books`.* 
+        `review`, `created_at`, `location`, `call_number`, `publisher`, `year_of_publication`, `price` FROM (SELECT 1 as rank, `books`.* 
               FROM `books`
               WHERE `title` like ?
             UNION
