@@ -1,8 +1,85 @@
 import React, { Component } from 'react'
 
 export default class header extends Component {
+
+  state = {
+    onFeedback: false,
+    name: '',
+    meetRequirement: '',
+    usability: '',
+    improvement: ''
+  }
+
+  onFeedback = () => {
+    this.setState({
+      onFeedback: !this.state.onFeedback
+    })
+  }
+
+  onEditChange = (e) => {
+    this.setState({
+      [e.target.name]: e.target.value
+    })
+  }
+
+  onSendFeedback = () => {
+    console.log(this.state)
+    this.setState({
+      onFeedback: false,
+      name: '',
+      meetRequirement: '',
+      usability: '',
+      improvement: ''
+    })
+  }
+  
+
+  MainFeedback = () => {
+    return (
+      <div>
+        <center style={{padding: "2px", fontSize: "20px", fontWeight: "bold"}}>Feedback sheet</center>
+        <div style={{fontSize: "12px"}}>*min grade: 1 , max grade: 10</div>
+        <div>Name</div>
+        <input type="text" style={{width: "99%"}} placeholder={'Abc Nguyen'}
+          name="name"
+          value={this.state.name}
+          onChange={this.onEditChange}
+          />
+        <div>Meeting user requirements </div>
+        <input min={1} max={10} placeholder="1->10" type="number" style={{width: "99%"}}
+          name="meetRequirement"
+          value={this.state.meetRequirement}
+          onChange={this.onEditChange}
+          />
+        <br />
+        <div>Usability </div>
+        <input min={1} max={10} placeholder="1->10" type="number" style={{width: "99%"}}
+          name="usability"
+          value={this.state.usability}
+          onChange={this.onEditChange}
+          />
+        <br />
+        <div>Improvement</div>
+        <textarea style={{width: "99%", paddingRight: "0", height: "150px"}} placeholder={'language, UI design, user experience design, etc.'}
+          name="improvement"
+          value={this.state.improvement}
+          onChange={this.onEditChange}
+          ></textarea>
+        <center style={{paddingTop: "3px"}}>
+        <button className="button_1 save" style={{borderColor: "#e6e6e6"}}
+          onClick={this.onSendFeedback}
+          >
+          Send
+        </button>
+        <button className="button_1 close" style={{borderColor: "#e6e6e6"}} onClick={this.onFeedback}>Close</button>
+        </center>
+      </div>
+    )
+  }
+
   render() {
     return (
+      <div>
       <header>
         
         <div className="container container-header">
@@ -10,9 +87,29 @@ export default class header extends Component {
             <div id="logo"></div>
             <h1 id="branding" onClick={this.props.onHome}><span className="highlight">Open</span> Library</h1>
           </div>
+          <div id="feedback-show-hide">
+            <i className="fa fa-star fa-2x" 
+            style={{ color: "yellow" }}
+            onClick={this.onFeedback}/>
+          </div>
         </div>
         
       </header>
+      <div>
+        {
+          this.state.onFeedback? (
+            <div className="container container-feedback">
+              <div className="book" 
+              id="feedback" 
+              style={{zIndex: "10", borderLeft: "3px solid #e8491d", borderBottom: "3px solid #e8491d"}}>
+                
+                {this.MainFeedback()}
+              </div>
+            </div>): 
+            <div></div>
+        }
+        </div>
+      </div>
     )
   }
 }

@@ -206,7 +206,7 @@ export default class Book extends Component {
   /**for UI */
   reviewCom = () => {
     return (
-      <textarea id="book-review" className="text" value={this.state.review || ''} rows="15" onChange={this.onEditChange} name="review" onKeyUp={this.onKeyUp}/>
+      <textarea id="book-review" className="text" value={this.state.review || ''} rows="15" onChange={this.onEditChange} name="review"/>
     )
   } 
    //for UI
