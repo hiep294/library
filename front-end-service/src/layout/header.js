@@ -59,7 +59,7 @@ export default class header extends Component {
           onChange={this.onEditChange}
           />
         <br />
-        <div>Improvement</div>
+        <div>Improvement / Comment</div>
         <textarea style={{width: "99%", paddingRight: "0", height: "150px"}} placeholder={'language, UI design, user experience design, etc.'}
           name="improvement"
           value={this.state.improvement}
