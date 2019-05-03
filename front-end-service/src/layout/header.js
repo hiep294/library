@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import axios from 'axios';
+import Auth from './../modules/Auth'
 
 export default class header extends Component {
 
@@ -7,7 +9,7 @@ export default class header extends Component {
     name: '',
     meetRequirement: '',
     usability: '',
-    improvement: ''
+    improvementComment: ''
   }
 
   onFeedback = () => {
@@ -23,14 +25,33 @@ export default class header extends Component {
   }
 
   onSendFeedback = () => {
-    console.log(this.state)
-    this.setState({
-      onFeedback: false,
-      name: '',
-      meetRequirement: '',
-      usability: '',
-      improvement: ''
-    })
+    let fb = new FormData() 
+    fb.append("feedback[name]", this.state.name)
+    fb.append("feedback[meet_requirement]", this.state.meetRequirement)
+    fb.append("feedback[usability]", this.state.usability)
+    fb.append("feedback[improvement_comment]", this.state.improvementComment)
+    axios({
+      url: Auth.getUrl() + "/feedbacks",
+      method: 'post',
+      data: fb,
+      headers: {
+        token: Auth.getToken(),
+        'Authorization': `token ${Auth.getToken()}`
+      }
+    }).then( res => {
+      if(res.data.status === 'SUCCESS'){
+        this.setState({
+          onFeedback: false,
+          name: '',
+          meetRequirement: '',
+          usability: '',
+          improvementComment: ''
+        })
+      } else {
+        console.log(res.data)
+      }
+    }).catch(errs => console.log(errs))
+    
   }
   
 
@@ -61,8 +82,8 @@ export default class header extends Component {
         <br />
         <div>Improvement / Comment</div>
         <textarea style={{width: "99%", paddingRight: "0", height: "150px"}} placeholder={'language, UI design, user experience design, etc.'}
-          name="improvement"
-          value={this.state.improvement}
+          name="improvementComment"
+          value={this.state.improvementComment}
           onChange={this.onEditChange}
           ></textarea>
         <center style={{paddingTop: "3px"}}>

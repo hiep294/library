@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_28_050159) do
+ActiveRecord::Schema.define(version: 2019_05_02_062120) do
 
   create_table "books", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title", null: false
@@ -32,6 +32,15 @@ ActiveRecord::Schema.define(version: 2019_04_28_050159) do
   create_table "due_days", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "type_of_book"
     t.integer "due_days"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "feedbacks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name"
+    t.integer "meet_requirement"
+    t.integer "usability"
+    t.text "improvement_comment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
