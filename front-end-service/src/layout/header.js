@@ -108,7 +108,7 @@ export default class header extends Component {
             <div id="logo"></div>
             <h1 id="branding" onClick={this.props.onHome}><span className="highlight">Open</span> Library</h1>
           </div>
-          <div id="feedback-show-hide">
+          <div id="feedback-show-hide" style={{display: "none"}}>
             <i className="fa fa-star fa-2x" 
             style={{ color: "yellow" }}
             onClick={this.onFeedback}/>
