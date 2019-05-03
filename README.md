@@ -1,5 +1,5 @@
 ## Demo
-https://youtu.be/zAin4nqD7_4
+https://youtu.be/V83rue-ivLY
 
 ## Scenario
 Open university would like to have library website. 
@@ -13,7 +13,7 @@ Open university would like to have library website.
 4. In book management, each book should need the due days. due days means the number of days which the student has to return book.
 5. The app supports creating and updating tickets. When the student borrows book, there needs to minus 1 of book quantity. When the student returns book, if the book is still good, plus 1 of this book quantity; if the book is not good, this book quantity will not change.
 6. In policy of library, each student can hold a limit of books, so there needs to define how many books which the students has been borrowing, also has been borrowing but over due date.
-
+7. There are two types of book, one is Reference Book, another is Text Book. Their fine and due days are also different.
 ## Technologies
 
 * Back end service applies MySQL as Database Management System, Ruby On Rails as Application Programming Interface
@@ -22,11 +22,11 @@ Open university would like to have library website.
 
 ## System Requirements:
 
-* Ruby version: 2.5.3
+* Ruby version: 2.5.3 (required)
 
-* Rails version: 5.2.3
+* Rails version: 5.2.3 (required)
 
-* NodeJS: 8.15.1 or more
+* NodeJS: 10.15.3
 
 * MySQL: 14.4
 
@@ -76,4 +76,5 @@ rails s
 ```
 npm start
 ```
+4. Access the app in browser via: ```http://localhost:3000/```
 

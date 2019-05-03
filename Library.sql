@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: localhost
--- Thời gian đã tạo: Th5 01, 2019 lúc 05:01 AM
+-- Thời gian đã tạo: Th5 03, 2019 lúc 09:11 PM
 -- Phiên bản máy phục vụ: 10.1.38-MariaDB
--- Phiên bản PHP: 7.3.3
+-- Phiên bản PHP: 7.3.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -78,12 +78,13 @@ INSERT INTO `books` (`id`, `title`, `authors`, `tags`, `available_quantity`, `is
 (6, 'Development across the life span', 'Robert S. Feldman DEMO', 'Physical', 97, 0, '1590744-M.jpg', 'Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed gravida malesuada urna eget hendrerit. In convallis fermentum purus id cursus. Sed venenatis mollis mollis. Etiam ullamcorper, nulla non facilisis facilisis, sapien quam eleifend tellus, sit amet euismod eros elit in massa. Donec leo libero, gravida at mi nec, fermentum luctus est. Nunc ligula justo, maximus in tempor a, blandit vel mi. Sed consectetur facilisis nisl nec maximus. Fusce fermentum enim vitae mi consectetur sagittis. Mauris pharetra mattis condimentum. Curabitur nec nisi volutpat, facilisis enim vehicula, interdum sapien. ', '2019-04-13 15:08:12', '2019-04-22 02:42:14', 'a12', '0131925385', 'Pearson/Prentice Hall', 2006, 600000),
 (7, 'Understanding movies', 'Louis D. Giannetti', 'Music DEMO', 99, 1, '2.jpg', 'Etiam ullamcorper, nulla non facilisis facilisis, sapien quam eleifend tellus, sit amet euismod eros elit in massa. Donec leo libero, gravida at mi nec, fermentum luctus est. Nunc ligula justo, maximus in tempor a, blandit vel mi. Sed consectetur facilisis nisl nec maximus. Fusce fermentum enim vitae mi consectetur sagittis. Mauris pharetra mattis condimentum. Curabitur nec nisi volutpat, facilisis enim vehicula, interdum sapien. Maecenas dictum sem a neque bibendum facilisis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean posuere sollicitudin tellus quis varius. Aliquam non posuere ipsum, et venenatis eros.', '2019-04-13 15:11:11', '2019-04-28 10:19:12', 'a12', '0139363106', 'Prentice-Hall', 1982, 700000),
 (8, 'Statistical methods', 'Herbert Arkin, Raymond R. Colton', 'Soft skills DEMO', 95, 1, 's.jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quis accumsan neque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque ac est id libero facilisis rhoncus sit amet ac risus. Mauris fringilla rhoncus dolor sed posuere. Aenean ante metus, congue in faucibus sed, sodales vel lorem. Duis a bibendum ex, et sollicitudin dolor.', '2019-04-13 15:12:54', '2019-04-22 02:42:14', 'a12', '0389001198', 'Barnes & Noble ', 1970, 800000),
-(9, 'Physics', 'Joseph W. Kane', 'Soft skills', 97, 1, '7152529-M.jpg', 'Mauris elementum tincidunt lectus, ut mollis erat blandit et. Curabitur et urna luctus, euismod mi sed, dignissim nunc. Ut vehicula iaculis tortor ac porttitor. Maecenas libero sapien, posuere sit amet ex id, condimentum placerat est. Mauris ac odio vulputate magna vulputate vestibulum ac vitae massa. Proin at sem mi. Etiam aliquam nulla nec nisi dictum, et vestibulum sem gravida. Donec eget quam dui. Phasellus vitae augue vitae mi tempor facilisis consequat sit amet justo. Duis arcu turpis, tempus et tincidunt id, suscipit a est.\n\n', '2019-04-13 15:14:19', '2019-04-13 15:26:43', 'a12', '0471083232', 'Wiley', 1983, 900000),
+(9, 'Physics', 'Joseph W. Kane', 'Soft skills', 97, 1, '7152529-M.jpg', 'Mauris elementum tincidunt lectus, ut mollis erat blandit et. Curabitur et urna luctus, euismod mi sed, dignissim nunc. Ut vehicula iaculis tortor ac porttitor. Maecenas libero sapien, posuere sit amet ex id, condimentum placerat est. Mauris ac odio vulputate magna vulputate vestibulum ac vitae massa. Proin at sem mi. Etiam aliquam nulla nec nisi dictum, et vestibulum sem gravida. Donec eget quam dui. Phasellus vitae augue vitae mi tempor facilisis consequat sit amet justo. Duis arcu turpis, tempus et tincidunt id, suscipit a est.\n\n', '2019-04-13 15:14:19', '2019-05-02 07:42:47', 'a12', '0471083232', 'Wiley', 1983, 900000),
 (10, 'Calculus and analytic geometry', 'George Brinton Thomas', 'Soft skills', 98, 1, '3961810-M.jpg', 'Suspendisse sit amet condimentum purus, eget maximus quam. Nullam eget metus finibus, egestas quam id, pellentesque nisi. Ut auctor odio libero, sit amet porta sapien euismod at. Duis fringilla mi nulla. Aliquam lectus purus, sollicitudin vel urna vel, suscipit efficitur tellus. Aliquam blandit mauris quis volutpat rutrum. Phasellus quam purus, lobortis eu varius et, egestas ultricies odio. Fusce congue dui et nisl congue laoreet. Morbi in rhoncus leo, id sagittis mauris. Curabitur tempus mauris id ante dictum, sed blandit nibh imperdiet. Duis lacinia fringilla arcu, ut tempor turpis fermentum at. Proin non diam quis tellus malesuada ultrices in et ipsum. Nulla orci urna, blandit eget nibh in, tempus finibus eros. DEMO', '2019-04-13 15:15:47', '2019-04-16 15:23:14', 'a12', '0201529297', 'Addison-Wesley', 1992, 1000000),
-(11, 'Linear algebra with applications', 'Williams, Gareth', 'Soft skills', 94, 0, '7956364-M.jpg', 'In neque velit, hendrerit non turpis sed, egestas faucibus nibh. Aliquam risus velit, varius et ullamcorper eget, dignissim ac lorem. Vivamus eu blandit elit. Nullam sagittis quam in magna imperdiet porta. Curabitur interdum ullamcorper feugiat. Sed sed eros non dolor tempor vestibulum et ut sem. Vivamus eros tellus, bibendum et ipsum lobortis, accumsan viverra lorem. In at nulla gravida, tincidunt erat id, feugiat eros. Phasellus auctor in augue at mattis. Fusce accumsan, lorem at malesuada tincidunt, leo neque luctus eros, et varius mauris nibh sed enim. Mauris purus neque, hendrerit at lacus vitae, posuere efficitur sem. In sit amet mi pulvinar, iaculis sem sit amet, sagittis purus. Curabitur hendrerit mattis imperdiet.  DEMO', '2019-04-13 15:17:08', '2019-04-30 03:18:11', 'a12', '0697097382', 'Wm. C. Brown Publishers ', 1991, 1100000),
-(12, 'Never victorious, never defeated DEMO', 'Taylor Caldwell', 'Soft skills DEMO', 92, 0, '6981079-M.jpg', 'Suspendisse sit amet condimentum purus, eget maximus quam. Nullam eget metus finibus, egestas quam id, pellentesque nisi. Ut auctor odio libero, sit amet porta sapien euismod at. Duis fringilla mi nulla. Aliquam lectus purus, sollicitudin vel urna vel, suscipit efficitur tellus. Aliquam blandit mauris quis volutpat rutrum. Phasellus quam purus, lobortis eu varius et, egestas ultricies odio. Fusce congue dui et nisl congue laoreet. Morbi in rhoncus leo, id sagittis mauris. Curabitur tempus mauris id ante dictum, sed blandit nibh imperdiet. Duis lacinia fringilla arcu, ut tempor turpis fermentum at. Proin non diam quis tellus malesuada ultrices in et ipsum. Nulla orci urna, blandit eget nibh in, tempus finibus eros. Ut ultrices eget orci vel dictum. Nulla eu tincidunt dolor. Pellentesque eros quam, interdum eget urna porttitor, tristique placerat nisi.', '2019-04-13 15:21:41', '2019-04-30 03:20:35', 'a12', 'A 123.1213', 'AnandBot', 2012, 1200000),
+(11, 'Linear algebra with applications', 'Williams, Gareth', 'Soft skills', 92, 0, '7956364-M.jpg', 'In neque velit, hendrerit non turpis sed, egestas faucibus nibh. Aliquam risus velit, varius et ullamcorper eget, dignissim ac lorem. Vivamus eu blandit elit. Nullam sagittis quam in magna imperdiet porta. Curabitur interdum ullamcorper feugiat. Sed sed eros non dolor tempor vestibulum et ut sem. Vivamus eros tellus, bibendum et ipsum lobortis, accumsan viverra lorem. In at nulla gravida, tincidunt erat id, feugiat eros. Phasellus auctor in augue at mattis. Fusce accumsan, lorem at malesuada tincidunt, leo neque luctus eros, et varius mauris nibh sed enim. Mauris purus neque, hendrerit at lacus vitae, posuere efficitur sem. In sit amet mi pulvinar, iaculis sem sit amet, sagittis purus. Curabitur hendrerit mattis imperdiet.  DEMO', '2019-04-13 15:17:08', '2019-05-03 07:02:40', 'a12', '0697097382', 'Wm. C. Brown Publishers ', 1991, 1100000),
+(12, 'Never victorious, never defeated DEMO', 'Taylor Caldwell', 'Soft skills DEMO', 86, 0, '6981079-M.jpg', 'Suspendisse sit amet condimentum purus, eget maximus quam. Nullam eget metus finibus, egestas quam id, pellentesque nisi. Ut auctor odio libero, sit amet porta sapien euismod at. Duis fringilla mi nulla. Aliquam lectus purus, sollicitudin vel urna vel, suscipit efficitur tellus. Aliquam blandit mauris quis volutpat rutrum. Phasellus quam purus, lobortis eu varius et, egestas ultricies odio. Fusce congue dui et nisl congue laoreet. Morbi in rhoncus leo, id sagittis mauris. Curabitur tempus mauris id ante dictum, sed blandit nibh imperdiet. Duis lacinia fringilla arcu, ut tempor turpis fermentum at. Proin non diam quis tellus malesuada ultrices in et ipsum. Nulla orci urna, blandit eget nibh in, tempus finibus eros. Ut ultrices eget orci vel dictum. Nulla eu tincidunt dolor. Pellentesque eros quam, interdum eget urna porttitor, tristique placerat nisi.', '2019-04-13 15:21:41', '2019-05-03 08:53:12', 'a12', 'A 123.1213', 'AnandBot', 2012, 1200000),
 (13, 'Never Say Never DEMO', 'Jo-Ann Power', 'Soft skills DEMO', 0, 1, '404203-M.jpg', 'Augusta VanderHorn knows too much about scandal. As the younger sister of the infamous American beauty, Colleen VanderHorn, who wed British Lord Bryce Falconer, and was divorced for adultery, it\'s been hard for Gus to avoid the taint. Now she is embroiled in scandal herself, for Colleen has kidnapped her own child from his father, to hold him for ransom to support her latest lover. Gus knows it\'s vital to help find her nephew, but she harbors a secret reason for wanting to assist in the search. Gus is in love with the man her sister married. For Bryce, she\'ll do anything, even risk her reputation--and her heart--by traveling at his side on a quest to rescue his child.', '2019-04-13 15:23:57', '2019-04-15 17:38:54', 'a12', 'A 123.1213', 'Factory A', 2019, 1300000),
-(14, 'Ten spooky stories  adding price DEMO', 'R. L. Stine', 'Soft skills', 1, 1, 'demo-book-image.jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vulputate massa massa, eu euismod ante iaculis id. Fusce eu libero non massa eleifend molestie. Duis porta, massa id blandit egestas, qasdasdasd', '2019-04-27 15:14:41', '2019-04-29 16:49:06', 'a12', 'A 123.1213', 'Factory A', 2019, 2);
+(14, 'Ten spooky stories  adding price DEMO', 'R. L. Stine', 'Soft skills', 0, 1, 'demo-book-image.jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vulputate massa massa, eu euismod ante iaculis id. \nFusce eu libero non massa eleifend molestie. Duis porta, massa id blandit egestas, qasdasdasd\nasdfasdfasdfasdf\nasdfasdf\nNew Line', '2019-04-27 15:14:41', '2019-05-02 08:59:23', 'a12', 'A 123.1213', 'Factory A', 2019, 2),
+(15, 'New book', 'R. L. Stine', 'Soft skills', 220, 0, 'new_book.jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vulputate massa massa, eu euismod ante iaculis id. Fusce eu libero non massa eleifend molestie. Duis porta, massa id blandit egestas', '2019-05-02 07:47:10', '2019-05-03 09:12:18', 'a12', 'A 123.1213', 'Factory A', 2019, 100000);
 
 -- --------------------------------------------------------
 
@@ -104,8 +105,35 @@ CREATE TABLE `due_days` (
 --
 
 INSERT INTO `due_days` (`id`, `type_of_book`, `due_days`, `created_at`, `updated_at`) VALUES
-(1, 'Reference Book', 14, '2019-04-13 14:07:43', '2019-04-15 18:12:00'),
-(2, 'Text Book', 60, '2019-04-13 14:07:48', '2019-04-15 18:09:37');
+(1, 'Reference Book', 10, '2019-04-13 14:07:43', '2019-05-03 09:12:09'),
+(2, 'Text Book', 60, '2019-04-13 14:07:48', '2019-05-03 07:03:44');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `feedbacks`
+--
+
+CREATE TABLE `feedbacks` (
+  `id` bigint(20) NOT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `meet_requirement` int(11) DEFAULT NULL,
+  `usability` int(11) DEFAULT NULL,
+  `improvement_comment` text,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Đang đổ dữ liệu cho bảng `feedbacks`
+--
+
+INSERT INTO `feedbacks` (`id`, `name`, `meet_requirement`, `usability`, `improvement_comment`, `created_at`, `updated_at`) VALUES
+(3, 'Bui Quang Linh ', 10, 9, 'Good interface, easy to use,website load very fast.\nThere are many functions to help user.\nThere are functions to calculate date time borrow ticket,calculate time.', '2019-05-02 07:19:12', '2019-05-02 07:19:12'),
+(4, 'To Hai Nam', 10, 9, 'Improve UI Design.\nChange how to use to create ticket: set a tab, and then in that tab, it allows to choose a student and books for creating a ticket.', '2019-05-02 08:02:49', '2019-05-02 08:02:49'),
+(5, 'khoa nguyen', 10, 10, 'increasing fee should split each term', '2019-05-02 09:08:11', '2019-05-02 09:08:11'),
+(6, 'Nguyen Xuan Huy', 9, 8, 'the ticket create process is not optimize.\n', '2019-05-03 09:03:37', '2019-05-03 09:03:37'),
+(7, 'hieu', 10, 10, 'good, need add some animation', '2019-05-03 09:17:11', '2019-05-03 09:17:11');
 
 -- --------------------------------------------------------
 
@@ -126,8 +154,8 @@ CREATE TABLE `fees` (
 --
 
 INSERT INTO `fees` (`id`, `type_of_book`, `fee_per_day`, `created_at`, `updated_at`) VALUES
-(1, 'Reference Book', 2000, '2019-04-27 15:47:03', '2019-04-27 17:39:59'),
-(2, 'Text Book', 1000, '2019-04-27 15:47:24', '2019-04-27 17:40:12');
+(1, 'Reference Book', 2000, '2019-04-27 15:47:03', '2019-05-03 07:01:24'),
+(2, 'Text Book', 1000, '2019-04-27 15:47:24', '2019-05-01 10:41:17');
 
 -- --------------------------------------------------------
 
@@ -161,7 +189,8 @@ INSERT INTO `schema_migrations` (`version`) VALUES
 ('20190427153729'),
 ('20190427154328'),
 ('20190428050112'),
-('20190428050159');
+('20190428050159'),
+('20190502062120');
 
 -- --------------------------------------------------------
 
@@ -183,7 +212,6 @@ CREATE TABLE `students` (
 --
 
 INSERT INTO `students` (`id`, `email`, `name`, `avatar`, `created_at`, `updated_at`) VALUES
-(1, 'std1@gmail.com', 'std1\'s name', 'download.png', '2019-04-13 14:00:51', '2019-04-13 14:12:14'),
 (2, 'std2@gmail.com', 'std2\'s name', 'download.png', '2019-04-13 14:00:51', '2019-04-13 14:12:09'),
 (3, 'std3@gmail.com', 'std3\'s name', 'download.png', '2019-04-13 14:00:51', '2019-04-13 14:12:05'),
 (4, 'std4@gmail.com', 'std4\'s name', 'download.png', '2019-04-13 14:00:51', '2019-04-13 14:12:02'),
@@ -203,7 +231,7 @@ INSERT INTO `students` (`id`, `email`, `name`, `avatar`, `created_at`, `updated_
 (18, 'std18@gmail.com', 'std18\'s name', 'images.png', '2019-04-13 14:00:52', '2019-04-22 02:24:57'),
 (19, 'std19@gmail.com', 'std19\'s name', 'child-1837375_960_720.png', '2019-04-13 14:00:52', '2019-04-22 02:24:50'),
 (20, 'std20@gmail.com', 'std20\'s name', 'Avatar-Transparent-Image.png', '2019-04-13 14:00:52', '2019-04-22 02:24:45'),
-(21, 'std21@gmail.com', 'std21\'s names', '28e7312d32356cabb08cb36d5d232492.jpg', '2019-04-16 14:49:48', '2019-04-22 02:24:39');
+(21, 'std21@gmail.com', 'std21\'s names', '28e7312d32356cabb08cb36d5d232492.jpg', '2019-04-16 14:49:48', '2019-05-02 09:03:31');
 
 -- --------------------------------------------------------
 
@@ -240,7 +268,17 @@ INSERT INTO `tickets` (`id`, `student_id`, `created_at`, `updated_at`) VALUES
 (15, 20, '2019-04-26 10:08:44', '2019-04-26 10:08:44'),
 (16, 14, '2019-04-26 14:51:14', '2019-04-26 14:51:14'),
 (17, 21, '2019-04-26 15:20:34', '2019-04-26 15:20:34'),
-(18, 21, '2019-04-30 03:18:11', '2019-04-30 03:18:11');
+(18, 21, '2019-04-30 03:18:11', '2019-04-30 03:18:11'),
+(19, 21, '2019-05-01 08:54:00', '2019-05-01 08:54:00'),
+(20, 19, '2019-05-01 08:54:52', '2019-05-01 08:54:52'),
+(21, 16, '2019-05-01 10:24:15', '2019-05-01 10:24:15'),
+(22, 21, '2019-05-01 10:42:18', '2019-05-01 10:42:18'),
+(23, 21, '2019-05-02 07:01:18', '2019-05-02 07:01:18'),
+(24, 20, '2019-05-02 07:42:47', '2019-05-02 07:42:47'),
+(25, 21, '2019-05-02 08:59:23', '2019-05-02 08:59:23'),
+(26, 19, '2019-05-02 09:01:15', '2019-05-02 09:01:15'),
+(27, 21, '2019-05-03 08:52:14', '2019-05-03 08:52:14'),
+(28, 21, '2019-05-03 09:12:18', '2019-05-03 09:12:18');
 
 -- --------------------------------------------------------
 
@@ -268,14 +306,14 @@ CREATE TABLE `ticket_details` (
 
 INSERT INTO `ticket_details` (`id`, `ticket_id`, `book_id`, `due_date`, `return_date`, `created_at`, `updated_at`, `note`, `is_good`, `student_id`, `fee`) VALUES
 (1, 1, 12, '2019-04-14 15:25:47', NULL, '2019-04-13 15:25:47', '2019-04-13 15:25:47', NULL, 1, 20, 0),
-(2, 1, 11, '2019-06-14 15:25:47', NULL, '2019-04-13 15:25:47', '2019-04-13 15:25:47', NULL, 1, 20, 0),
+(2, 1, 11, '2019-04-14 15:25:47', '2019-05-03 07:02:40', '2019-04-13 15:25:47', '2019-05-03 07:02:40', '(demo)', 1, 20, 37301),
 (3, 1, 10, '2019-06-14 15:25:47', NULL, '2019-04-13 15:25:48', '2019-04-13 15:25:48', NULL, 1, 20, 0),
 (4, 2, 10, '2019-06-14 15:26:27', '2019-04-16 15:23:14', '2019-04-13 15:26:27', '2019-04-16 15:23:14', NULL, 1, 19, 0),
-(5, 2, 9, '2019-04-14 15:26:27', NULL, '2019-04-13 15:26:27', '2019-04-13 15:26:27', NULL, 1, 19, 0),
+(5, 2, 9, '2019-04-14 15:26:27', '2019-05-01 10:28:30', '2019-04-13 15:26:27', '2019-05-01 10:28:30', '(demo) return book late', 1, 19, 16792),
 (6, 3, 9, '2019-06-14 15:26:43', NULL, '2019-04-13 15:26:43', '2019-04-13 15:26:43', NULL, 1, 18, 0),
 (7, 4, 8, '2019-06-14 15:28:30', NULL, '2019-04-13 15:28:30', '2019-04-13 15:28:30', NULL, 1, 17, 0),
 (8, 4, 7, '2019-04-13 15:28:31', '2019-04-28 10:19:12', '2019-04-13 15:28:30', '2019-04-28 10:19:12', 'late return', 1, 17, 14785),
-(9, 4, 6, '2019-06-14 15:28:30', NULL, '2019-04-13 15:28:30', '2019-04-13 15:28:30', NULL, 1, 17, 0),
+(9, 4, 6, '2019-04-14 15:28:30', NULL, '2019-04-13 15:28:30', '2019-04-13 15:28:30', NULL, 1, 17, 0),
 (10, 5, 5, '2019-04-27 15:30:01', '2019-04-22 02:48:08', '2019-04-13 15:30:01', '2019-04-22 02:48:08', '', 1, 16, 0),
 (11, 5, 4, '2019-04-27 15:30:01', NULL, '2019-04-13 15:30:01', '2019-04-13 15:30:01', NULL, 1, 16, 0),
 (12, 6, 12, '2019-04-25 18:08:53', '2019-04-15 18:14:29', '2019-04-15 18:08:53', '2019-04-15 18:14:30', NULL, 1, 20, 0),
@@ -285,7 +323,7 @@ INSERT INTO `ticket_details` (`id`, `ticket_id`, `book_id`, `due_date`, `return_
 (16, 9, 8, '2019-06-15 15:15:46', NULL, '2019-04-16 15:15:46', '2019-04-16 15:15:46', NULL, 1, 19, 0),
 (17, 9, 11, '2019-04-30 15:15:46', '2019-04-16 15:21:51', '2019-04-16 15:15:46', '2019-04-16 15:21:51', NULL, 0, 19, 0),
 (18, 10, 12, '2019-05-03 02:14:18', '2019-04-24 06:50:04', '2019-04-19 02:14:18', '2019-04-24 06:50:04', NULL, 1, 21, 0),
-(19, 10, 11, '2019-05-03 02:14:18', NULL, '2019-04-19 02:14:18', '2019-04-19 02:14:18', NULL, 1, 21, 0),
+(19, 10, 11, '2019-05-03 02:14:18', '2019-05-01 10:25:40', '2019-04-19 02:14:18', '2019-05-01 10:25:40', NULL, 1, 21, 0),
 (20, 11, 8, '2019-06-21 02:42:14', NULL, '2019-04-22 02:42:14', '2019-04-22 02:42:14', NULL, 1, 20, 0),
 (21, 11, 6, '2019-05-06 02:42:14', '2019-04-28 10:17:52', '2019-04-22 02:42:14', '2019-04-28 10:17:52', 'DEMO book is not good when return', 0, 20, 350000),
 (22, 12, 3, '2019-06-21 02:51:44', NULL, '2019-04-22 02:51:44', '2019-04-22 02:51:44', NULL, 1, 15, 0),
@@ -294,10 +332,29 @@ INSERT INTO `ticket_details` (`id`, `ticket_id`, `book_id`, `due_date`, `return_
 (25, 14, 12, '2019-05-09 17:42:50', '2019-04-30 03:20:35', '2019-04-25 17:42:50', '2019-04-30 03:20:35', NULL, 1, 21, 0),
 (26, 15, 12, '2019-05-10 10:08:44', NULL, '2019-04-26 10:08:44', '2019-04-26 10:08:44', NULL, 1, 20, 0),
 (27, 16, 12, '2019-05-10 14:51:14', NULL, '2019-04-26 14:51:14', '2019-04-26 14:51:14', NULL, 1, 14, 0),
-(28, 17, 12, '2019-05-10 15:20:34', '2019-04-28 15:59:36', '2019-04-26 15:20:34', '2019-04-28 15:59:36', 'DEMO \"book is not good\"', 0, 21, 100000),
-(29, 17, 11, '2019-05-10 15:20:34', NULL, '2019-04-26 15:20:34', '2019-04-26 15:20:34', NULL, 1, 21, 0),
+(28, 17, 12, '2019-05-10 15:20:34', '2019-04-28 15:59:36', '2019-04-26 15:20:34', '2019-05-01 10:40:27', 'DEMO \"book is not good\", updated note', 0, 21, 100000),
+(29, 17, 11, '2019-05-10 15:20:34', '2019-05-01 10:26:44', '2019-04-26 15:20:34', '2019-05-01 10:26:44', '(DEMO)- book is not good when returning', 0, 21, 500000),
 (30, 18, 12, '2019-05-14 03:18:11', '2019-04-30 03:22:35', '2019-04-30 03:18:11', '2019-04-30 03:22:35', '(DEMO) book is not good', 0, 21, 1200000),
-(31, 18, 11, '2019-05-14 03:18:11', NULL, '2019-04-30 03:18:11', '2019-04-30 03:18:11', NULL, 1, 21, 0);
+(31, 18, 11, '2019-05-14 03:18:11', '2019-05-02 07:02:56', '2019-04-30 03:18:11', '2019-05-02 07:02:56', 'good', 1, 21, 0),
+(32, 19, 12, '2019-05-15 08:54:00', '2019-05-02 07:05:21', '2019-05-01 08:54:00', '2019-05-02 07:05:21', '(demo) book is not good', 0, 21, 600000),
+(33, 19, 11, '2019-05-15 08:54:00', '2019-05-02 07:04:45', '2019-05-01 08:54:00', '2019-05-02 07:04:45', NULL, 1, 21, 0),
+(34, 20, 12, '2019-05-15 08:54:52', NULL, '2019-05-01 08:54:52', '2019-05-01 08:54:52', NULL, 1, 19, 0),
+(35, 20, 11, '2019-05-15 08:54:52', NULL, '2019-05-01 08:54:52', '2019-05-01 08:54:52', NULL, 1, 19, 0),
+(36, 21, 12, '2019-05-15 10:24:15', NULL, '2019-05-01 10:24:15', '2019-05-01 10:24:15', NULL, 1, 16, 0),
+(37, 21, 11, '2019-05-15 10:24:15', NULL, '2019-05-01 10:24:15', '2019-05-01 10:24:15', NULL, 1, 16, 0),
+(38, 22, 12, '2019-05-16 10:42:18', '2019-05-03 08:53:12', '2019-05-01 10:42:18', '2019-05-03 08:53:12', NULL, 1, 21, 0),
+(39, 22, 11, '2019-05-16 10:42:18', '2019-05-02 09:02:38', '2019-05-01 10:42:18', '2019-05-02 09:02:38', NULL, 0, 21, 90000),
+(40, 23, 12, '2019-05-17 07:01:18', '2019-05-02 07:45:15', '2019-05-02 07:01:18', '2019-05-02 07:45:15', NULL, 1, 21, 0),
+(41, 23, 11, '2019-05-17 07:01:18', NULL, '2019-05-02 07:01:18', '2019-05-02 07:01:18', NULL, 1, 21, 0),
+(42, 24, 12, '2019-05-17 07:42:47', NULL, '2019-05-02 07:42:47', '2019-05-02 07:42:47', NULL, 1, 20, 0),
+(43, 24, 9, '2019-07-01 07:42:47', NULL, '2019-05-02 07:42:47', '2019-05-02 07:42:47', NULL, 1, 20, 0),
+(44, 25, 15, '2019-05-17 08:59:23', NULL, '2019-05-02 08:59:23', '2019-05-02 08:59:23', NULL, 1, 21, 0),
+(45, 25, 14, '2019-07-01 08:59:23', NULL, '2019-05-02 08:59:23', '2019-05-02 08:59:23', NULL, 1, 21, 0),
+(46, 26, 12, '2019-05-17 09:01:15', NULL, '2019-05-02 09:01:15', '2019-05-02 09:01:15', NULL, 1, 19, 0),
+(47, 26, 11, '2019-05-17 09:01:15', NULL, '2019-05-02 09:01:15', '2019-05-02 09:01:15', NULL, 1, 19, 0),
+(48, 27, 15, '2019-05-17 08:52:14', '2019-05-03 08:53:22', '2019-05-03 08:52:14', '2019-05-03 08:53:22', NULL, 1, 21, 0),
+(49, 27, 12, '2019-05-17 08:52:14', NULL, '2019-05-03 08:52:14', '2019-05-03 08:52:14', NULL, 1, 21, 0),
+(50, 28, 15, '2019-05-13 09:12:18', NULL, '2019-05-03 09:12:18', '2019-05-03 09:12:18', NULL, 1, 21, 0);
 
 -- --------------------------------------------------------
 
@@ -322,7 +379,7 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `email`, `password_digest`, `name`, `auth_token`, `is_admin`, `created_at`, `updated_at`) VALUES
 (1, 'youremail@gmail.com', '$2a$10$fjiBvlsqQrOg2BzQIxYgfObfNUBFWuUfM2PjTTTZYhUtFq9HhEXf.', NULL, 'T4dhYrdinbstW1C1aDGrPUgs', 0, '2019-04-13 14:07:27', '2019-04-13 14:07:27'),
-(2, 'admin@gmail.com', '$2a$10$omH/r/dFmQ9LgPTXkCL8P.Ty6KIKFSQ42vrr6jvk8I/3JJ5.DDDGe', NULL, '8CJEiPKjEAgVt6FkMbQdHLeq', 0, '2019-04-13 14:08:23', '2019-04-30 06:00:18');
+(2, 'admin@gmail.com', '$2a$10$c2MJvdxq2Dc5ekZoP6TkPOI17EHbUXii5iIkcqY2wU/.PTHSvXRUS', NULL, '2uLBoKNYiHadaq1CnQJ16ieK', 0, '2019-04-13 14:08:23', '2019-05-03 10:15:16');
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -344,6 +401,12 @@ ALTER TABLE `books`
 -- Chỉ mục cho bảng `due_days`
 --
 ALTER TABLE `due_days`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Chỉ mục cho bảng `feedbacks`
+--
+ALTER TABLE `feedbacks`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -394,13 +457,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT cho bảng `books`
 --
 ALTER TABLE `books`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT cho bảng `due_days`
 --
 ALTER TABLE `due_days`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT cho bảng `feedbacks`
+--
+ALTER TABLE `feedbacks`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT cho bảng `fees`
@@ -418,13 +487,13 @@ ALTER TABLE `students`
 -- AUTO_INCREMENT cho bảng `tickets`
 --
 ALTER TABLE `tickets`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT cho bảng `ticket_details`
 --
 ALTER TABLE `ticket_details`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 
 --
 -- AUTO_INCREMENT cho bảng `users`
