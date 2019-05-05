@@ -41,6 +41,9 @@ export default class BookBasket extends Component {
           this.props.onRemoveStudent()
           alert("Created ticket Id: " + res.data.data.ticket.id)
         }
+        if(res.data.status === 'ERROR'){
+          alert(res.data.data)
+        }
       }).catch( errs => console.log(errs))
     }
   }
